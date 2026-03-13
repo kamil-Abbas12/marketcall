@@ -51,12 +51,12 @@ export default function Product() {
 
             {/* Image hidden on small devices */}
             <Image
-              src="/adv.jpg"
-              width={120}
-              height={120}
+              src="/boy.png"
+              width={220}
+              height={200}
               alt="advertiser"
               className="hidden sm:block absolute bottom-4 right-4 
-              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 lg:right-0 xl:bottom-0 xl:right-0"
+              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 md:right-[-52] lg:right-[-53] xl:bottom-0 xl:right-[-60]"
             />
           </div>
 
@@ -98,12 +98,12 @@ export default function Product() {
 
             {/* Image hidden on small devices */}
             <Image
-              src="/partner.jpg"
-              width={120}
+              src="/man.png"
+              width={220}
               height={120}
               alt="partner"
               className="hidden sm:block absolute bottom-4 right-4 
-              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 lg:right-0 xl:bottom-0 xl:right-0"
+              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 md:right-[-52] lg:right-[-53] xl:bottom-0 xl:right-[-60]"
             />
           </div>
         </div>

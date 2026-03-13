@@ -18,7 +18,7 @@ const Navbar = () => {
 
         {/* LOGO */}
         <Link href="/">
-          <Image src="/logo.svg" width={140} height={30} alt="logo" />
+          <Image src="/eagle.png" width={140} height={30} alt="logo" className="mt-2" />
         </Link>
 
         {/* DESKTOP MENU */}

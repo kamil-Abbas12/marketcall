@@ -22,20 +22,20 @@ export default function Footer() {
           {/* LEFT SIDE */}
           <div className="max-w-md">
             <Image
-              src="/logo1.svg"
+              src="/eagle.png"
               width={150}
               height={80}
               alt="Top Dog Roofing"
-              className="mb-4"
+              className="mb-4 justify-start"
             />
 
-            <p className="text-sm text-slate-200/80 leading-6">
+            <p className="text-sm ml-0 lg:ml-5 text-slate-200/80 leading-6">
               Hawk Mediallc helps local roofers grow faster with exclusive 
               pay-per-call leads. We connect you with homeowners actively 
               searching for roofing services in your area.
             </p>
 
-            <div className="mt-4 space-y-2 text-sm">
+            <div className="mt-4 space-y-2 ml-0 lg:ml-5 text-sm">
               <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
                 className="block text-blue-300 hover:text-white"

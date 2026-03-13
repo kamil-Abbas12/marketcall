@@ -50,7 +50,7 @@ We have monthly releases of new features to give our advertisers and partners ad
  
   avatarUrls = [],
   
-  rightImageSrc = "/call.jpg",
+  rightImageSrc = "/pic.png",
 }: HeroProps) {
   const titleLines = title.split("\n");
 
