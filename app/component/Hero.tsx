@@ -4,6 +4,7 @@ import React from "react"
 
 const Hero = () => {
   return (
+<section className="bg-white">
 <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-16  py-20 gap-16">
       <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 xl:px-24 py-16 gap-10 xl:gap-15">
 
@@ -53,6 +54,7 @@ const Hero = () => {
       </div>
 
     </div>
+            </section>
   )
 }
 

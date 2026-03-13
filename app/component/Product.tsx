@@ -10,8 +10,8 @@ export default function Product() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* TITLE */}
-        <p className="text-center text-gray-500 text-sm mb-2">Product</p>
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-14">
+        <p className="text-center text-gray-500 text-md mb-2">Product</p>
+        <h2 className="text-center text-gray-900 text-3xl md:text-4xl font-bold mb-14">
           Boost your digital presence with Marketcall
         </h2>
 
@@ -19,8 +19,8 @@ export default function Product() {
         <div className="grid md:grid-cols-2 gap-8">
 
           {/* ADVERTISERS */}
-          <div className="bg-white border rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
-            <h3 className="text-2xl font-semibold mb-4">Advertisers</h3>
+          <div className="bg-white border border-gray-400 rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
+            <h3 className="text-2xl text-gray-900 font-semibold mb-4">Advertisers</h3>
             <p className="text-gray-600 mb-6">
               I am an advertiser, app developer, service provider or agency
               looking to reach the right customers and maximize profits.
@@ -61,8 +61,8 @@ export default function Product() {
           </div>
 
           {/* PARTNERS */}
-          <div className="bg-white border rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
-            <h3 className="text-2xl font-semibold mb-4">Partners</h3>
+          <div className="bg-white border border-gray-400 rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Partners</h3>
             <p className="text-gray-600 mb-6">
               I am a publisher, website owner, influencer, email marketer,
               app developer looking to promote brands, products and services
