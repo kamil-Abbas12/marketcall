@@ -45,15 +45,16 @@ const Ads = () => {
             Our Impact
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
-            Numbers that{" "}
+            Metrics that {" "}
             <span style={{ background: "linear-gradient(90deg, #7C3AED, #C026D3)",
                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              speak for themselves
+prove success
             </span>
           </h2>
-          <p className="text-gray-500 max-w-md mx-auto text-sm md:text-base">
-            Real results from real campaigns. See what Marketcall delivers 
-            for advertisers and affiliates worldwide.
+          <p className="text-gray-500 w-full mx-auto text-md md:text-base">
+            Real impact from real campaigns.  
+Discover how Marketcall empowers advertisers and affiliates worldwide with measurable success.
+ 
           </p>
         </motion.div>
 

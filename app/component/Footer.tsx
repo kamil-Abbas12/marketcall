@@ -300,14 +300,14 @@ export default function Footer() {
                className="flex-wrap">
 
             {/* Brand col */}
-            <div style={{ minWidth: 260 }}>
-              <Image
-                src="/logo.jpg"
-                width={140}
-                height={52}
-                alt="Hawks Media LLC"
-                style={{ marginBottom: 20, borderRadius: 8 }}
-              />
+            <div style={{ minWidth: 120 }}>
+   <Image
+  src="/image.jpg"
+  alt="Hawks Media LLC"
+  width={120}   // controls intrinsic size
+  height={70}
+  style={{ objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} // removed width/height here
+/>
               <p className="footer-desc">
                 Hawks Media LLC helps local roofers grow faster with exclusive
                 pay-per-call leads — connecting you with homeowners actively

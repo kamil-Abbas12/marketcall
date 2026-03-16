@@ -408,7 +408,7 @@ const Hero = () => {
               letterSpacing: "-0.03em",
             }}
           >
-            New standard in{" "}
+           Elevating success in {" "}
             <span className="hero-gradient-text">performance marketing</span>
           </h1>
 
@@ -423,9 +423,8 @@ const Hero = () => {
               fontWeight: 400,
             }}
           >
-            Marketcall is the best affiliate network to get new clients.
-            We generate millions of high-quality conversions every year
-            for businesses worldwide.
+            Your gateway to new clients. Marketcall powers millions of trusted conversions every year.
+ 
           </p>
 
           {/* Buttons */}

@@ -29,14 +29,13 @@ export default function Product() {
             ✦ Product
           </span>
           <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Boost your digital presence{" "}
+            Amplify your online growth {" "}
             <span style={{ background: "linear-gradient(90deg, #A78BFA, #EC4899)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               with Marketcall
             </span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-base">
-            Everything you need to scale your marketing, all in one powerful platform.
-          </p>
+One powerful hub to accelerate your marketing strategy          </p>
         </div>
 
         {/* CARDS */}
@@ -63,12 +62,12 @@ export default function Product() {
             <h3 className="text-2xl text-white font-bold mb-4">Advertisers</h3>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              I am an advertiser, app developer, service provider or agency
-              looking to reach the right customers and maximize profits.
+             I’m an advertiser, app developer, service provider, or agency ready to connect with the right audience and maximize ROI.
             </p>
 
             <ul className="space-y-3 mb-8">
-              {["Get promoted by super affiliates", "Easy to use", "Available remotely", "Pay only for qualified calls", "Detailed statistics and analytics"].map((item, i) => (
+              {["Partner with elite affiliates", "Simple, intuitive platform", "Work from anywhere", 
+              "Pay only for verified calls", "In-depth reporting and insights"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: "rgba(34,197,94,0.2)", border: "1px solid rgba(34,197,94,0.4)" }}>
                     <Check size={11} className="text-green-400" />
@@ -108,12 +107,12 @@ export default function Product() {
             <h3 className="text-2xl text-white font-bold mb-4">Partners</h3>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              I am a publisher, website owner, influencer, email marketer,
-              app developer looking to promote brands and maximize my revenue.
+              I’m a publisher, website owner, influencer, email marketer, or app developer eager to promote top brands and maximize my revenue potential.
             </p>
 
             <ul className="space-y-3 mb-8">
-              {["Only top offers", "Weekly payouts", "Free advertising tools", "Exclusive verticals", "High conversion"].map((item, i) => (
+              {["Curated high-value offers", "Consistent weekly payments", "Free, ready-to-use promo tools", 
+              "Access to exclusive categories", "Strong conversion rates"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: "rgba(34,197,94,0.2)", border: "1px solid rgba(34,197,94,0.4)" }}>
                     <Check size={11} className="text-green-400" />

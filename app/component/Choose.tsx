@@ -24,12 +24,18 @@ const fadeUp: Variants = {
 };
 
 export default function Choose({
-  title = "Why choose Marketcall?",
-  description = `Marketcall is the best performance marketing solution. We help match advertisers with suitable affiliates, pairing them for long term success in maximizing profits. Our goal is to help you achieve continuous scalable growth.
+  title = "Why Marketcall stands out?",
+  description = `Marketcall is your ultimate performance marketing partner.  
+We connect advertisers with the right affiliates, building long-term partnerships that maximize profits and fuel sustainable growth.
+ 
 
-Our client-first approach drives us to deliver only the highest quality product for our customers.
+Our client-first mindset ensures excellence.  
+We deliver only the highest-quality solutions designed to empower your success.
+ 
 
-We have monthly releases of new features to give our advertisers and partners additional tools and functionality.`,
+Innovation you can count on.  
+With monthly feature releases, we equip advertisers and partners with fresh tools and advanced functionality to stay ahead.
+`,
   ctaText = "See our video",
   ctaHref = "#",
   rightImageSrc = "/pic.png",
@@ -91,7 +97,7 @@ We have monthly releases of new features to give our advertisers and partners ad
             variants={fadeUp}
             className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-white"
           >
-            Why choose{" "}
+            Why Marketcall {" "}
             <span
               style={{
                 background: "linear-gradient(90deg, #A78BFA, #EC4899)",
@@ -99,14 +105,14 @@ We have monthly releases of new features to give our advertisers and partners ad
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Marketcall?
+stands out?
             </span>
           </motion.h2>
 
           {/* Description */}
           <motion.div variants={fadeUp} className="mt-8 space-y-4">
             {description.split("\n\n").map((para, i) => (
-              <p key={i} className="text-gray-400 text-sm md:text-base leading-relaxed">
+              <p key={i} className="text-gray-400 text-md md:text-base leading-relaxed">
                 {para}
               </p>
             ))}

@@ -240,7 +240,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-            <Image src="/logo.jpg" width={130} height={28} alt="logo" style={{ marginTop: 2 }} />
+            <Image src="/image.jpg" width={130} height={28} alt="logo" style={{ marginTop: 2 }} />
           </Link>
 
           {/* DESKTOP LINKS */}
