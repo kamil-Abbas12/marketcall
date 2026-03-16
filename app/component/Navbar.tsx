@@ -240,7 +240,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-            <Image src="/image.jpg" width={130} height={28} alt="logo" style={{ marginTop: 2 }} />
+            <Image src="/new.png" width={130} height={28} alt="logo" style={{ marginTop: 2 }} />
           </Link>
 
           {/* DESKTOP LINKS */}
@@ -254,11 +254,16 @@ const Navbar = () => {
 
           {/* DESKTOP ACTIONS */}
           <div className="hidden lg:flex items-center gap-5">
-            <button className="nav-login">Login</button>
-            <button className="nav-cta">
+            <a href="tel:+17864850671" className="nav-login">
+
+              Call Now
+              </a>
+            <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+                   className="nav-cta">
               <span>Get a quote</span>
               <span className="cta-arrow">→</span>
-            </button>
+            </a>
           </div>
 
           {/* MOBILE HAMBURGER */}
@@ -281,11 +286,13 @@ const Navbar = () => {
                 </button>
               ))}
               <div className="mobile-divider" />
-              <button className="nav-login" style={{ fontSize: 16 }}>Login</button>
-              <button className="nav-cta" style={{ width: "100%", justifyContent: "center", padding: "13px 24px", fontSize: 16 }}>
+              <a href="tel:+17864850671" className="nav-login" style={{ fontSize: 16 }}>Call Now</a>
+              <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+                   className="nav-cta" style={{ width: "100%", justifyContent: "center", padding: "13px 24px", fontSize: 16 }}>
                 <span>Get a quote</span>
                 <span className="cta-arrow">→</span>
-              </button>
+              </a>
             </div>
           </div>
         )}

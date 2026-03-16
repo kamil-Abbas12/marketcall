@@ -283,7 +283,7 @@ export default function Footer() {
           {/* CTA Band */}
           <div className="footer-cta-band">
             <div>
-              <div className="cta-band-title">Ready to grow your roofing business?</div>
+              <div className="cta-band-title">Ready to grow your marketing business?</div>
               <div className="cta-band-sub">Get exclusive pay-per-call leads delivered to you today.</div>
             </div>
             <button className="footer-cta-btn">
@@ -302,16 +302,16 @@ export default function Footer() {
             {/* Brand col */}
             <div style={{ minWidth: 120 }}>
    <Image
-  src="/image.jpg"
+  src="/new.png"
   alt="Hawks Media LLC"
   width={120}   // controls intrinsic size
   height={70}
   style={{ objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} // removed width/height here
 />
               <p className="footer-desc">
-                Hawks Media LLC helps local roofers grow faster with exclusive
+                Hawks Media LLC helps local markets grow faster with exclusive
                 pay-per-call leads — connecting you with homeowners actively
-                searching for roofing services in your area.
+                searching for marketing services in your area.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 24 }}>
@@ -324,11 +324,11 @@ export default function Footer() {
                   </span>
                   info@hawksmediallc.com
                 </a>
-                <a href="tel:+16784628013" className="footer-contact-link">
+                <a href="tel:+17864850671" className="footer-contact-link">
                   <span className="footer-contact-icon">
                     <Phone size={14} />
                   </span>
-                  +1 678 462 8013
+                  +1 786 485 0671
                 </a>
               </div>
             </div>
