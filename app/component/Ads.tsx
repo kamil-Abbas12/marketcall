@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Rocket, DollarSign, PhoneCall } from "lucide-react";
-
+import React, { useEffect, useState } from "react";
 // Dynamically import CountUp for client-side only
 const CountUp = dynamic(() => import("react-countup"), { ssr: false });
 
@@ -14,6 +13,10 @@ const stats = [
 ];
 
 const Ads = () => {
+  const [mounted, setMounted] = useState(false);
+ useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <section
       className="relative w-full py-24 overflow-hidden"
@@ -93,6 +96,7 @@ Discover how Marketcall empowers advertisers and affiliates worldwide with measu
     WebkitTextFillColor: "transparent",
   }}
 >
+{mounted && (
   <CountUp
     start={0}
     end={stat.number}
@@ -103,6 +107,7 @@ Discover how Marketcall empowers advertisers and affiliates worldwide with measu
   >
     {({ countUpRef }) => <span ref={countUpRef} />}
   </CountUp>
+)}
 </div>
 
               {/* Label */}
