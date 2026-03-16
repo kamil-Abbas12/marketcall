@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import { Poppins } from "next/font/google";
 import Footer from "./component/Footer";
+import CursorGlow from "./CursorGlow";
 const poppins = Poppins({
   weight: ['400', '600', '700'], // regular, semi-bold, bold
   subsets: ['latin'],
@@ -36,6 +38,7 @@ export default function RootLayout({
       <body
         className={poppins.className}
       >
+<CursorGlow/>
         <Navbar/>
         {children}
         <Footer/>

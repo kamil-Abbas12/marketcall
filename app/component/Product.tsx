@@ -1,146 +1,179 @@
 "use client";
-import { Settings, Shield, Cpu, Users, DollarSign, Headphones } from "lucide-react";
 
-import { Check } from "lucide-react";
+import {
+  Settings,
+  Shield,
+  Cpu,
+  Users,
+  DollarSign,
+  Headphones,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Product() {
   return (
-    <section className="w-full py-10 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative w-full py-24 overflow-hidden" style={{ background: "linear-gradient(160deg, #0f0c29 0%, #1a1040 40%, #24243e 100%)" }}>
+
+      {/* Background glow orbs */}
+      <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] rounded-full opacity-20" style={{ background: "radial-gradient(circle, #7C3AED, transparent 70%)", filter: "blur(60px)" }}></div>
+      <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-20" style={{ background: "radial-gradient(circle, #C026D3, transparent 70%)", filter: "blur(60px)" }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10" style={{ background: "radial-gradient(circle, #6366F1, transparent 70%)", filter: "blur(80px)" }}></div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
 
         {/* TITLE */}
-        <p className="text-center text-gray-500 text-md mb-2">Product</p>
-        <h2 className="text-center text-gray-900 text-3xl md:text-4xl font-bold mb-14">
-          Boost your digital presence with Marketcall
-        </h2>
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 text-purple-300" style={{ background: "rgba(124,58,237,0.2)", border: "1px solid rgba(124,58,237,0.4)" }}>
+            ✦ Product
+          </span>
+          <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+            Boost your digital presence{" "}
+            <span style={{ background: "linear-gradient(90deg, #A78BFA, #EC4899)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              with Marketcall
+            </span>
+          </h2>
+          <p className="text-gray-400 max-w-xl mx-auto text-base">
+            Everything you need to scale your marketing, all in one powerful platform.
+          </p>
+        </div>
 
         {/* CARDS */}
         <div className="grid md:grid-cols-2 gap-8">
 
           {/* ADVERTISERS */}
-          <div className="bg-white border border-gray-400 rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
-            <h3 className="text-2xl text-gray-900 font-semibold mb-4">Advertisers</h3>
-            <p className="text-gray-600 mb-6">
+          <div
+            className="group relative rounded-2xl p-8 pb-40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+            style={{
+              background: "linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(124,58,237,0.1) 100%)",
+              border: "1px solid rgba(99,102,241,0.3)",
+              boxShadow: "0 0 0 rgba(99,102,241,0)",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 40px rgba(99,102,241,0.3)")}
+            onMouseLeave={e => (e.currentTarget.style.boxShadow = "0 0 0 rgba(99,102,241,0)")}
+          >
+            {/* Card glow top */}
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.8), transparent)" }}></div>
+
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-indigo-300 mb-4" style={{ background: "rgba(99,102,241,0.2)", border: "1px solid rgba(99,102,241,0.3)" }}>
+              For Advertisers
+            </div>
+
+            <h3 className="text-2xl text-white font-bold mb-4">Advertisers</h3>
+
+            <p className="text-gray-400 mb-6 leading-relaxed">
               I am an advertiser, app developer, service provider or agency
               looking to reach the right customers and maximize profits.
             </p>
 
-            <ul className="space-y-3 text-gray-700 text-md mb-8">
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Get promote by super affiliates
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Easy to use
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Pay only for qualified calls
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Detailed statistics and analytics
-              </li>
+            <ul className="space-y-3 mb-8">
+              {["Get promoted by super affiliates", "Easy to use", "Available remotely", "Pay only for qualified calls", "Detailed statistics and analytics"].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-gray-300">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: "rgba(34,197,94,0.2)", border: "1px solid rgba(34,197,94,0.4)" }}>
+                    <Check size={11} className="text-green-400" />
+                  </span>
+                  {item}
+                </li>
+              ))}
             </ul>
 
-            <button className="bg-indigo-600 text-white mt-8  lg:mt-14 xl:mt-8 px-6 py-3 rounded-md">
-              See all features
+            <button className="group/btn flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200 hover:gap-3"
+              style={{ background: "linear-gradient(135deg, #6366F1, #8B5CF6)", boxShadow: "0 4px 20px rgba(99,102,241,0.4)" }}>
+              See all features <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
             </button>
 
-            {/* Image hidden on small devices */}
-            <Image
-              src="/boy.png"
-              width={220}
-              height={200}
-              alt="advertiser"
-              className="hidden sm:block absolute bottom-4 right-4 
-              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 md:right-[-52] lg:right-[-53] xl:bottom-0 xl:right-[-60]"
-            />
+            <Image src="/boy.png" width={220} height={200} alt="advertiser"
+              className="hidden sm:block absolute bottom-0 right-[-20px] opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:right-0" />
           </div>
 
           {/* PARTNERS */}
-          <div className="bg-white border border-gray-400 rounded-xl p-8 relative overflow-hidden pb-32 md:pb-28 lg:pb-32 xl:pb-36">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Partners</h3>
-            <p className="text-gray-600 mb-6">
+          <div
+            className="group relative rounded-2xl p-8 pb-40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+            style={{
+              background: "linear-gradient(135deg, rgba(192,38,211,0.15) 0%, rgba(236,72,153,0.1) 100%)",
+              border: "1px solid rgba(192,38,211,0.3)",
+              boxShadow: "0 0 0 rgba(192,38,211,0)",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 40px rgba(192,38,211,0.3)")}
+            onMouseLeave={e => (e.currentTarget.style.boxShadow = "0 0 0 rgba(192,38,211,0)")}
+          >
+            {/* Card glow top */}
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(192,38,211,0.8), transparent)" }}></div>
+
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-300 mb-4" style={{ background: "rgba(192,38,211,0.2)", border: "1px solid rgba(192,38,211,0.3)" }}>
+              For Partners
+            </div>
+
+            <h3 className="text-2xl text-white font-bold mb-4">Partners</h3>
+
+            <p className="text-gray-400 mb-6 leading-relaxed">
               I am a publisher, website owner, influencer, email marketer,
-              app developer looking to promote brands, products and services
-              and maximize my revenue.
+              app developer looking to promote brands and maximize my revenue.
             </p>
 
-            <ul className="space-y-3 text-gray-700 mb-8  ">
-              <li className="flex items-start gap-2 ">
-                <Check className="text-green-500 mt-1" size={18} />
-                Only top offers
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Weekly payouts
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Free advertising tools
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                Exclusive verticals
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="text-green-500 mt-1" size={18} />
-                High conversion 
-              </li>
+            <ul className="space-y-3 mb-8">
+              {["Only top offers", "Weekly payouts", "Free advertising tools", "Exclusive verticals", "High conversion"].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-gray-300">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: "rgba(34,197,94,0.2)", border: "1px solid rgba(34,197,94,0.4)" }}>
+                    <Check size={11} className="text-green-400" />
+                  </span>
+                  {item}
+                </li>
+              ))}
             </ul>
 
-            <button className="bg-indigo-600 text-white text-sm lg:text-md px-4 py-3 lg:px-6  rounded-md">
-              Become a partner
+            <button className="group/btn flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200 hover:gap-3"
+              style={{ background: "linear-gradient(135deg, #C026D3, #EC4899)", boxShadow: "0 4px 20px rgba(192,38,211,0.4)" }}>
+              Become a partner <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
             </button>
 
-            {/* Image hidden on small devices */}
-            <Image
-              src="/man.png"
-              width={220}
-              height={120}
-              alt="partner"
-              className="hidden sm:block absolute bottom-4 right-4 
-              opacity-90 sm:bottom-0 sm:right-0 lg:bottom-0 md:right-[-52] lg:right-[-53] xl:bottom-0 xl:right-[-60]"
-            />
+            <Image src="/man.png" width={220} height={120} alt="partner"
+              className="hidden sm:block absolute bottom-0 right-[-20px] opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:right-0" />
           </div>
         </div>
 
-        {/* FEATURES ROW */}
-     
-<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-16 text-gray-700">
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <Settings size={24} className="text-indigo-600" />
-    <span className="text-center">Marketing tools</span>
-  </div>
+        {/* FEATURES */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16">
+          {[
+            { icon: Settings, text: "Marketing tools", color: "#6366F1" },
+            { icon: Shield, text: "Fraud prevention", color: "#8B5CF6" },
+            { icon: Cpu, text: "Automation", color: "#A855F7" },
+            { icon: Users, text: "Lead generation", color: "#C026D3" },
+            { icon: DollarSign, text: "Payouts", color: "#EC4899" },
+            { icon: Headphones, text: "Dedicated Support", color: "#6366F1" },
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={i}
+                className="group flex flex-col items-center justify-center rounded-xl py-6 px-3 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = `rgba(${item.color === "#6366F1" ? "99,102,241" : item.color === "#8B5CF6" ? "139,92,246" : item.color === "#A855F7" ? "168,85,247" : item.color === "#C026D3" ? "192,38,211" : "236,72,153"},0.15)`;
+                  e.currentTarget.style.border = `1px solid ${item.color}44`;
+                  e.currentTarget.style.boxShadow = `0 0 24px ${item.color}33`;
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.04)";
+                  e.currentTarget.style.border = "1px solid rgba(255,255,255,0.08)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                <div className="p-3 rounded-xl mb-3 transition-all duration-300" style={{ background: `${item.color}22`, border: `1px solid ${item.color}44` }}>
+                  <Icon size={22} style={{ color: item.color }} />
+                </div>
+                <span className="text-xs text-gray-400 text-center font-medium group-hover:text-white transition-colors duration-200">
+                  {item.text}
+                </span>
+              </div>
+            );
+          })}
+        </div>
 
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <Shield size={24} className="text-indigo-600" />
-    <span className="text-center">Fraud prevention</span>
-  </div>
-
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <Cpu size={24} className="text-indigo-600" />
-    <span className="text-center">Automatization</span>
-  </div>
-
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <Users size={24} className="text-indigo-600" />
-    <span className="text-center">Lead generation</span>
-  </div>
-
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <DollarSign size={24} className="text-indigo-600" />
-    <span className="text-center">Payouts</span>
-  </div>
-
-  <div className="flex flex-row items-center justify-center gap-2 min-h-[80px]">
-    <Headphones size={24} className="text-indigo-600" />
-    <span className="text-center">Dedicated Support</span>
-  </div>
-</div>
       </div>
     </section>
   );
