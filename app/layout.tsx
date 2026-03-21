@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={poppins.className}
       >
-<CursorGlow/>
+{/* <CursorGlow/> */}
         <Navbar/>
         {children}
         <Footer/>

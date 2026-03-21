@@ -14,7 +14,7 @@ type GetProps = {
 
 export default function Get({
   title = "Get Private Affiliate Case Studies",
-  subtitle = "And learn all secret methods used by Marketcall affiliates",
+  subtitle = "And learn all secret methods used by Hawks Media affiliates",
   buttonLabel = "Subscribe",
   privacyPolicyHref = "/privacy-policy",
   onSubscribe,
@@ -57,16 +57,25 @@ export default function Get({
   return (
     <section
       className="relative w-full overflow-hidden py-24"
-      style={{ background: "linear-gradient(160deg, #f5f3ff 0%, #fdf4ff 50%, #eff6ff 100%)" }}
+      style={{
+        background:
+          "linear-gradient(160deg, #dbeafe 0%, #eff6ff 40%, #e0f2fe 80%, #dbeafe 100%)",
+      }}
     >
-      {/* Background glow orbs */}
+      {/* Background glow */}
       <div
-        className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] rounded-full opacity-30 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #c4b5fd, transparent 70%)", filter: "blur(60px)" }}
+        className="absolute top-[-100px] right-[-100px] w-[450px] h-[450px] rounded-full opacity-40 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, #93c5fd, transparent 70%)",
+          filter: "blur(70px)",
+        }}
       />
       <div
-        className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-30 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #f0abfc, transparent 70%)", filter: "blur(60px)" }}
+        className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-35 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, #7dd3fc, transparent 70%)",
+          filter: "blur(65px)",
+        }}
       />
 
       <div className="mx-auto max-w-5xl px-4 relative z-10">
@@ -74,161 +83,111 @@ export default function Get({
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7 }}
           className="relative rounded-3xl overflow-hidden p-10 sm:p-14 text-center"
           style={{
-            background: "rgba(255,255,255,0.8)",
-            border: "1px solid rgba(124,58,237,0.15)",
-            boxShadow: "0 20px 60px rgba(124,58,237,0.08), 0 4px 20px rgba(0,0,0,0.04)",
-            backdropFilter: "blur(12px)",
+            background: "rgba(239,246,255,0.75)",
+            border: "1px solid rgba(147,197,253,0.45)",
+            boxShadow:
+              "0 20px 60px rgba(37,99,235,0.1), 0 4px 20px rgba(37,99,235,0.06)",
+            backdropFilter: "blur(16px)",
           }}
         >
-          {/* Top glow line */}
-          <div
-            className="absolute top-0 left-0 right-0 h-px"
-            style={{ background: "linear-gradient(90deg, transparent, rgba(124,58,237,0.6), transparent)" }}
-          />
+          {/* Icon */}
+          <div className="mx-auto mb-6 w-16 h-16 rounded-2xl flex items-center justify-center"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(59,130,246,0.18), rgba(14,165,233,0.14))",
+              border: "1px solid rgba(59,130,246,0.3)",
+            }}
+          >
+            <BookOpen size={28} style={{ color: "#1d4ed8" }} />
+          </div>
 
-          {/* Inner bg gradient */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.03) 0%, rgba(192,38,211,0.03) 100%)" }}
-          />
-
-          <div className="relative z-10 mx-auto max-w-2xl">
-
-            {/* Icon */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-6 w-16 h-16 rounded-2xl flex items-center justify-center"
+          {/* Title */}
+          <h2
+            className="text-3xl sm:text-4xl font-extrabold mb-3"
+            style={{ color: "#0f172a" }}
+          >
+            Get Private{" "}
+            <span
               style={{
-                background: "linear-gradient(135deg, rgba(124,58,237,0.12), rgba(192,38,211,0.12))",
-                border: "1px solid rgba(124,58,237,0.2)",
+                background:
+                  "linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
-              <BookOpen size={28} className="text-violet-600" />
-            </motion.div>
-
-            {/* Badge */}
-            <span
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-5 text-violet-600"
-              style={{ background: "rgba(124,58,237,0.08)", border: "1px solid rgba(124,58,237,0.25)" }}
-            >
-              Free Resources
+              Affiliate Case Studies
             </span>
+          </h2>
 
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 mb-3">
-              {title.includes("Affiliate") ? (
-                <>
-                  Get Private{" "}
-                  <span
-                    style={{
-                      background: "linear-gradient(90deg, #7C3AED, #C026D3)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    Affiliate Case Studies
-                  </span>
-                </>
-              ) : (
-                title
-              )}
-            </h2>
+          <p className="text-sm sm:text-base mb-10" style={{ color: "#475569" }}>
+            {subtitle}
+          </p>
 
-            {/* Subtitle */}
-            <p className="text-gray-500 text-sm sm:text-base mb-10">
-              {subtitle}
-            </p>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit}>
-             <div
-className="flex flex-col sm:flex-row w-full gap-3 items-stretch overflow-hidden rounded-xl 
-md:border md:border-violet-300/40 md:shadow-[0_4px_20px_rgba(124,58,237,0.08)]"
->
-                {/* Input */}
-                <div className="relative flex flex-col md:flex-1">
-                  <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-violet-400">
-                    <Mail size={18} />
-                  </div>
-                  <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="email"
-                    inputMode="email"
-                    autoComplete="email"
-                    placeholder="Enter your email"
-                    className="h-14 w-full rounded-md  bg-white pl-11 pr-4 text-gray-900 placeholder:text-gray-400
-                     focus:outline-none focus:ring-2 focus:ring-violet-200 text-sm"
-                    aria-label="Email"
-                  />
+          {/* Form */}
+          <form onSubmit={handleSubmit}>
+            <div className="flex flex-col sm:flex-row w-full gap-3 overflow-hidden rounded-xl md:border"
+              style={{
+                borderColor: "rgba(147,197,253,0.5)",
+              }}
+            >
+              <div className="relative flex flex-col md:flex-1">
+                <div className="absolute inset-y-0 left-4 flex items-center text-blue-500">
+                  <Mail size={18} />
                 </div>
-
-                {/* Button */}
-                <button
-                  type="submit"
-className="h-14 w-full sm:w-auto min-w-[140px] rounded-md px-7 text-sm font-semibold
- text-white transition-all duration-200 hover:opacity-90 cursor-pointer"                  style={{
-                    background: "linear-gradient(135deg, #7C3AED, #A855F7)",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.15)",
-                  }}
-                >
-                  {state === "loading" ? "Submitting..." : buttonLabel}
-                </button>
-              </div>
-
-              {/* Privacy checkbox */}
-              <div className="mt-4 flex flex-col md:flex-row items-start justify-start gap-2 text-left">
                 <input
-                  id="privacy"
-                  type="checkbox"
-                  checked={agreed}
-                  onChange={(e) => setAgreed(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 rounded border-gray-300 accent-violet-600 focus:ring-violet-200"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  placeholder="Enter your email"
+                  className="h-14 w-full rounded-md pl-11 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
                 />
-               <label htmlFor="privacy" className="text-xs text-gray-800">
-  I agree to the{" "}
-  <a
-    href={privacyPolicyHref}
-    className="text-violet-500 underline underline-offset-4 hover:text-violet-700 transition-colors"
-  >
-    Privacy Policy
-  </a>
-</label>
               </div>
 
-              {/* Status message */}
-              {message && (
-                <motion.p
-                  initial={{ opacity: 0, y: 4 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={[
-                    "mt-3 text-left text-sm font-medium",
-                    state === "success" ? "text-emerald-600" : "text-rose-500",
-                  ].join(" ")}
-                  role={state === "error" ? "alert" : "status"}
-                >
-                  {state === "success" ? "✓ " : "⚠ "}
-                  {message}
-                </motion.p>
-              )}
-            </form>
-
-            {/* Trust indicators */}
-            <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 flex-wrap">
-              {["No spam, ever", "Unsubscribe anytime", "5,000+ subscribers"].map((item, i) => (
-                <span key={i} className="flex items-center gap-1.5 text-xs text-gray-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-violet-400 inline-block" />
-                  {item}
-                </span>
-              ))}
+              <button
+                type="submit"
+                className="h-14 w-full sm:w-auto min-w-[140px] rounded-md px-7 text-sm font-semibold text-white"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #1d4ed8, #2563eb, #3b82f6)",
+                }}
+              >
+                {state === "loading" ? "Submitting..." : buttonLabel}
+              </button>
             </div>
-          </div>
+
+            {/* ✅ FIXED CHECKBOX */}
+            <div className="mt-4 flex gap-2 text-sm items-center justify-center">
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                className="accent-blue-600"
+              />
+              <label style={{ color: "#334155" }}>
+                I agree to the{" "}
+                <a
+                  href={privacyPolicyHref}
+                  className="underline hover:opacity-80"
+                  style={{ color: "#2563eb" }}
+                >
+                  Privacy Policy
+                </a>
+              </label>
+            </div>
+
+            {message && (
+              <p
+                className={`mt-3 text-sm ${
+                  state === "success" ? "text-green-600" : "text-red-500"
+                }`}
+              >
+                {message}
+              </p>
+            )}
+          </form>
         </motion.div>
       </div>
     </section>

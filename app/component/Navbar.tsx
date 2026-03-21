@@ -54,7 +54,7 @@ const Navbar = () => {
           background: rgba(10, 4, 28, 0.55);
           backdrop-filter: blur(20px) saturate(160%);
           -webkit-backdrop-filter: blur(20px) saturate(160%);
-          border: 1px solid rgba(167, 139, 250, 0.18);
+          border: 1px solid rgba(37, 99, 235, 0.18); /* blue border */
           border-radius: 20px;
           box-shadow:
             0 4px 24px rgba(0,0,0,0.4),
@@ -68,7 +68,7 @@ const Navbar = () => {
           border-top: none;
           max-width: 100%;
           background: rgba(8, 4, 21, 0.82);
-          box-shadow: 0 1px 0 rgba(167,139,250,0.12), 0 8px 32px rgba(0,0,0,0.5);
+          box-shadow: 0 1px 0 rgba(37,99,235,0.12), 0 8px 32px rgba(0,0,0,0.5);
         }
 
         @keyframes navDrop {
@@ -76,13 +76,13 @@ const Navbar = () => {
           to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ── Shimmer border top on scroll ── */
+        /* ── Top shimmer border on scroll ── */
         .nav-bar::before {
           content: '';
           position: absolute;
           top: 0; left: 10%; right: 10%;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(192,132,252,0.6), rgba(232,121,249,0.8), rgba(192,132,252,0.6), transparent);
+          background: linear-gradient(90deg, transparent, rgba(37,99,235,0.6), rgba(59,130,246,0.8), rgba(37,99,235,0.6), transparent);
           opacity: 0;
           transition: opacity 0.4s ease;
           border-radius: 1px;
@@ -109,7 +109,7 @@ const Navbar = () => {
           position: absolute;
           bottom: -2px; left: 0;
           width: 0; height: 1.5px;
-          background: linear-gradient(90deg, #c084fc, #e879f9);
+          background: linear-gradient(90deg, #2563eb, #3b82f6); /* blue underline */
           border-radius: 2px;
           transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -120,11 +120,11 @@ const Navbar = () => {
           width: 100%;
         }
 
-        /* ── Login ── */
+        /* ── Call Now link ── */
         .nav-login {
           font-size: 15px;
           font-weight: 500;
-          color: rgba(192, 132, 252, 0.9);
+          color: rgba(37,99,235,0.9); /* blue */
           background: none;
           border: none;
           cursor: pointer;
@@ -132,14 +132,14 @@ const Navbar = () => {
           letter-spacing: 0.01em;
         }
         .nav-login:hover {
-          color: #e879f9;
+          color: #3b82f6;
         }
 
         /* ── CTA button ── */
         .nav-cta {
           position: relative;
           overflow: hidden;
-          background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c026d3 100%);
+          background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
           border: none;
           color: white;
           padding: 10px 22px;
@@ -152,7 +152,7 @@ const Navbar = () => {
           align-items: center;
           gap: 6px;
           transition: transform 0.25s ease, box-shadow 0.25s ease;
-          box-shadow: 0 3px 16px rgba(124, 58, 237, 0.5), inset 0 1px 0 rgba(255,255,255,0.18);
+          box-shadow: 0 3px 16px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.18);
           white-space: nowrap;
           letter-spacing: 0.01em;
         }
@@ -160,14 +160,14 @@ const Navbar = () => {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, #9333ea 0%, #c026d3 100%);
+          background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
           opacity: 0;
           transition: opacity 0.25s ease;
         }
         .nav-cta:hover::before { opacity: 1; }
         .nav-cta:hover {
           transform: translateY(-1px);
-          box-shadow: 0 6px 24px rgba(168, 85, 247, 0.65), inset 0 1px 0 rgba(255,255,255,0.18);
+          box-shadow: 0 6px 24px rgba(59,130,246,0.65), inset 0 1px 0 rgba(255,255,255,0.18);
         }
         .nav-cta:active { transform: translateY(0); }
         .nav-cta span,
@@ -193,7 +193,7 @@ const Navbar = () => {
         }
         .nav-hamburger:hover {
           color: white;
-          background: rgba(167, 139, 250, 0.1);
+          background: rgba(37,99,235,0.1);
         }
 
         /* ── Mobile drawer ── */
@@ -201,7 +201,7 @@ const Navbar = () => {
           background: rgba(8, 4, 21, 0.97);
           backdrop-filter: blur(24px);
           -webkit-backdrop-filter: blur(24px);
-          border-top: 1px solid rgba(167,139,250,0.12);
+          border-top: 1px solid rgba(37,99,235,0.12);
           border-radius: 0 0 20px 20px;
           overflow: hidden;
           animation: mobileSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
@@ -230,7 +230,7 @@ const Navbar = () => {
         .mobile-divider {
           width: 100%;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(167,139,250,0.2), transparent);
+          background: linear-gradient(90deg, transparent, rgba(37,99,235,0.2), transparent);
           margin: 4px 0;
         }
       `}</style>
@@ -254,13 +254,11 @@ const Navbar = () => {
 
           {/* DESKTOP ACTIONS */}
           <div className="hidden lg:flex items-center gap-5">
-            <a href="tel:+17864850671" className="nav-login">
-
-              Call Now
-              </a>
+            <a href="tel:+17864850671" className="nav-login">Call Now</a>
             <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
-                   className="nav-cta">
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+              className="nav-cta"
+            >
               <span>Get a quote</span>
               <span className="cta-arrow">→</span>
             </a>
@@ -288,8 +286,9 @@ const Navbar = () => {
               <div className="mobile-divider" />
               <a href="tel:+17864850671" className="nav-login" style={{ fontSize: 16 }}>Call Now</a>
               <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
-                   className="nav-cta" style={{ width: "100%", justifyContent: "center", padding: "13px 24px", fontSize: 16 }}>
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+                className="nav-cta" style={{ width: "100%", justifyContent: "center", padding: "13px 24px", fontSize: 16 }}
+              >
                 <span>Get a quote</span>
                 <span className="cta-arrow">→</span>
               </a>
