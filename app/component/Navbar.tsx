@@ -54,7 +54,7 @@ const Navbar = () => {
           background: rgba(10, 4, 28, 0.55);
           backdrop-filter: blur(20px) saturate(160%);
           -webkit-backdrop-filter: blur(20px) saturate(160%);
-          border: 1px solid rgba(37, 99, 235, 0.18); /* blue border */
+          border: 1px solid rgba(37, 99, 235, 0.18);
           border-radius: 20px;
           box-shadow:
             0 4px 24px rgba(0,0,0,0.4),
@@ -91,12 +91,12 @@ const Navbar = () => {
           opacity: 1;
         }
 
-        /* ── Nav links ── */
+        /* ── Nav links — now blue to match CTA button ── */
         .nav-link {
           position: relative;
           font-size: 15px;
           font-weight: 500;
-          color: rgba(210, 195, 255, 0.75);
+          color: rgba(96, 165, 250, 0.85); /* blue-400 tint */
           background: none;
           border: none;
           cursor: pointer;
@@ -109,12 +109,12 @@ const Navbar = () => {
           position: absolute;
           bottom: -2px; left: 0;
           width: 0; height: 1.5px;
-          background: linear-gradient(90deg, #2563eb, #3b82f6); /* blue underline */
+          background: linear-gradient(90deg, #2563eb, #60a5fa);
           border-radius: 2px;
           transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .nav-link:hover {
-          color: rgba(240, 230, 255, 1);
+          color: #93c5fd; /* blue-300 on hover */
         }
         .nav-link:hover::after {
           width: 100%;
@@ -124,7 +124,7 @@ const Navbar = () => {
         .nav-login {
           font-size: 15px;
           font-weight: 500;
-          color: rgba(37,99,235,0.9); /* blue */
+          color: rgba(37,99,235,0.9);
           background: none;
           border: none;
           cursor: pointer;
@@ -183,7 +183,7 @@ const Navbar = () => {
           background: none;
           border: none;
           cursor: pointer;
-          color: rgba(210, 195, 255, 0.8);
+          color: rgba(96, 165, 250, 0.8); /* blue tint to match links */
           display: flex;
           align-items: center;
           justify-content: center;
@@ -192,7 +192,7 @@ const Navbar = () => {
           transition: color 0.2s ease, background 0.2s ease;
         }
         .nav-hamburger:hover {
-          color: white;
+          color: #93c5fd;
           background: rgba(37,99,235,0.1);
         }
 
@@ -216,7 +216,7 @@ const Navbar = () => {
         .mobile-link {
           font-size: 17px;
           font-weight: 500;
-          color: rgba(210, 195, 255, 0.8);
+          color: rgba(96, 165, 250, 0.85); /* blue to match desktop links */
           background: none;
           border: none;
           cursor: pointer;
@@ -224,7 +224,7 @@ const Navbar = () => {
           font-family: 'Outfit', sans-serif;
           padding: 6px 0;
         }
-        .mobile-link:hover { color: white; }
+        .mobile-link:hover { color: #93c5fd; }
 
         /* ── Divider in mobile ── */
         .mobile-divider {
