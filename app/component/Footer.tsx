@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+        /* NOTE: @import for Outfit font removed — loaded once in layout.tsx */
 
         .footer-root { font-family: 'Outfit', sans-serif; position: relative; overflow: hidden; background: #060a12; }
         .footer-bg { position: absolute; inset: 0; background:
@@ -88,10 +88,10 @@ export default function Footer() {
       `}</style>
 
       <footer className="footer-root">
-        <div className="footer-bg" />
-        <div className="footer-grid" />
-        <div className="footer-noise" />
-        <div className="footer-fade-top" />
+        <div className="footer-bg" aria-hidden="true" />
+        <div className="footer-grid" aria-hidden="true" />
+        <div className="footer-noise" aria-hidden="true" />
+        <div className="footer-fade-top" aria-hidden="true" />
 
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "72px 40px 48px", position: "relative", zIndex: 10 }}>
           {/* CTA Band */}
@@ -100,14 +100,14 @@ export default function Footer() {
               <div className="cta-band-title">Ready to grow your marketing business?</div>
               <div className="cta-band-sub">Get exclusive pay-per-call leads delivered to you today.</div>
             </div>
-            <button className="footer-cta-btn">
+            <button className="footer-cta-btn" aria-label="Get started with Hawks Media">
               <span>Get started</span>
-              <ArrowUpRight size={16} style={{ position: "relative", zIndex: 1 }} />
+              <ArrowUpRight size={16} style={{ position: "relative", zIndex: 1 }} aria-hidden="true" />
             </button>
           </div>
 
           {/* Divider */}
-          <div className="footer-divider" />
+          <div className="footer-divider" aria-hidden="true" />
 
           {/* Main columns */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto auto", gap: "64px", alignItems: "start" }}>
@@ -126,51 +126,51 @@ export default function Footer() {
                 searching for marketing services in your area.
               </p>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 24 }}>
+              <address style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 24, fontStyle: "normal" }}>
                 <a href="mailto:info@hawksmediallc.com" className="footer-contact-link">
-                  <span className="footer-contact-icon"><Mail size={14} /></span>
+                  <span className="footer-contact-icon" aria-hidden="true"><Mail size={14} /></span>
                   info@hawksmediallc.com
                 </a>
                 <a href="mailto:Billing@hawksmediallc.com" className="footer-contact-link">
-                  <span className="footer-contact-icon"><Mail size={14} /></span>
+                  <span className="footer-contact-icon" aria-hidden="true"><Mail size={14} /></span>
                   Billing@hawksmediallc.com
                 </a>
                 <a href="mailto:HR@hawksmediallc.com" className="footer-contact-link">
-                  <span className="footer-contact-icon"><Mail size={14} /></span>
+                  <span className="footer-contact-icon" aria-hidden="true"><Mail size={14} /></span>
                   HR@hawksmediallc.com
                 </a>
                 <a href="tel:+17864850671" className="footer-contact-link">
-                  <span className="footer-contact-icon"><Phone size={14} /></span>
+                  <span className="footer-contact-icon" aria-hidden="true"><Phone size={14} /></span>
                   +1 786 485 0671
                 </a>
-              </div>
+              </address>
             </div>
 
             {/* Quick Links */}
-            <div>
+            <nav aria-label="Footer quick links">
               <div className="footer-col-head">Quick Links</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 {sections.map((sec) => (
                   <button key={sec} className="footer-nav-link" onClick={() => scrollToSection(sec)}>
                     {sec}
-                    <ArrowUpRight size={13} className="link-arrow" />
+                    <ArrowUpRight size={13} className="link-arrow" aria-hidden="true" />
                   </button>
                 ))}
               </div>
-            </div>
+            </nav>
 
             {/* Social */}
             <div>
               <div className="footer-col-head">Follow Us</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <a href="" className="footer-social fb" aria-label="Facebook">
-                  <Facebook size={17} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }} role="list" aria-label="Social media links">
+                <a href="" className="footer-social fb" aria-label="Follow Hawks Media on Facebook" role="listitem">
+                  <Facebook size={17} aria-hidden="true" />
                 </a>
-                <a href="https://www.instagram.com/_hawksmedia_/" className="footer-social ig" aria-label="Instagram">
-                  <Instagram size={17} />
+                <a href="https://www.instagram.com/_hawksmedia_/" className="footer-social ig" aria-label="Follow Hawks Media on Instagram" role="listitem">
+                  <Instagram size={17} aria-hidden="true" />
                 </a>
-                <a href="https://www.linkedin.com/company/hawks-media-llc/" className="footer-social lin" aria-label="LinkedIn">
-                  <Linkedin size={17} />
+                <a href="https://www.linkedin.com/company/hawks-media-llc/" className="footer-social lin" aria-label="Follow Hawks Media on LinkedIn" role="listitem">
+                  <Linkedin size={17} aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -181,8 +181,8 @@ export default function Footer() {
             <span className="footer-bottom-text">
               © {new Date().getFullYear()} Hawks Media LLC — All rights reserved.
             </span>
-            <div className="footer-bottom-badge">
-              <div className="badge-dot-sm" />
+            <div className="footer-bottom-badge" aria-label="System status: operational">
+              <div className="badge-dot-sm" aria-hidden="true" />
               All systems operational
             </div>
           </div>

@@ -24,6 +24,9 @@ export default function Get({
   const [state, setState] = React.useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = React.useState<string>("");
 
+  // Unique id to associate the checkbox with its label — fixes Lighthouse accessibility failure
+  const checkboxId = React.useId();
+
   const emailOk = /^\S+@\S+\.\S+$/.test(email.trim());
 
   async function handleSubmit(e: React.FormEvent) {
@@ -69,6 +72,7 @@ export default function Get({
           background: "radial-gradient(circle, #93c5fd, transparent 70%)",
           filter: "blur(70px)",
         }}
+        aria-hidden="true"
       />
       <div
         className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-35 pointer-events-none"
@@ -76,6 +80,7 @@ export default function Get({
           background: "radial-gradient(circle, #7dd3fc, transparent 70%)",
           filter: "blur(65px)",
         }}
+        aria-hidden="true"
       />
 
       <div className="mx-auto max-w-5xl px-4 relative z-10">
@@ -100,6 +105,7 @@ export default function Get({
                 "linear-gradient(135deg, rgba(59,130,246,0.18), rgba(14,165,233,0.14))",
               border: "1px solid rgba(59,130,246,0.3)",
             }}
+            aria-hidden="true"
           >
             <BookOpen size={28} style={{ color: "#1d4ed8" }} />
           </div>
@@ -127,22 +133,28 @@ export default function Get({
           </p>
 
           {/* Form */}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} noValidate>
             <div className="flex flex-col sm:flex-row w-full gap-3 overflow-hidden rounded-xl md:border"
               style={{
                 borderColor: "rgba(147,197,253,0.5)",
               }}
             >
               <div className="relative flex flex-col md:flex-1">
-                <div className="absolute inset-y-0 left-4 flex items-center text-blue-500">
+                <div className="absolute inset-y-0 left-4 flex items-center text-blue-500" aria-hidden="true">
                   <Mail size={18} />
                 </div>
+                {/* Visually hidden label for screen readers */}
+                <label htmlFor="subscribe-email" className="sr-only">Email address</label>
                 <input
+                  id="subscribe-email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Enter your email"
+                  autoComplete="email"
                   className="h-14 w-full rounded-md pl-11 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  aria-required="true"
+                  aria-describedby={message ? "subscribe-message" : undefined}
                 />
               </div>
 
@@ -153,20 +165,23 @@ export default function Get({
                   background:
                     "linear-gradient(135deg, #1d4ed8, #2563eb, #3b82f6)",
                 }}
+                aria-busy={state === "loading"}
               >
                 {state === "loading" ? "Submitting..." : buttonLabel}
               </button>
             </div>
 
-            {/* ✅ FIXED CHECKBOX */}
+            {/* Checkbox — id+htmlFor association fixes the Lighthouse accessibility failure */}
             <div className="mt-4 flex gap-2 text-sm items-center justify-center">
               <input
+                id={checkboxId}
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
                 className="accent-blue-600"
+                aria-required="true"
               />
-              <label style={{ color: "#334155" }}>
+              <label htmlFor={checkboxId} style={{ color: "#334155" }}>
                 I agree to the{" "}
                 <a
                   href={privacyPolicyHref}
@@ -180,6 +195,8 @@ export default function Get({
 
             {message && (
               <p
+                id="subscribe-message"
+                role="alert"
                 className={`mt-3 text-sm ${
                   state === "success" ? "text-green-600" : "text-red-500"
                 }`}

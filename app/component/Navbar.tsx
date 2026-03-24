@@ -25,8 +25,6 @@ const Navbar = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-
         .nav-wrapper {
           position: fixed;
           top: 0;
@@ -236,11 +234,12 @@ const Navbar = () => {
       `}</style>
 
       <div className={`nav-wrapper ${scrolled ? "scrolled" : ""}`}>
-        <nav className="nav-bar" style={{ position: "relative" }}>
+        <nav className="nav-bar" style={{ position: "relative" }} aria-label="Main navigation">
 
           {/* LOGO */}
-          <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-            <Image src="/new.png" width={130} height={28} alt="logo" style={{ marginTop: 2 }} />
+          <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }} aria-label="Hawks Media — Home">
+            {/* priority added: logo is LCP element, must not be lazy-loaded */}
+            <Image src="/new.png" width={130} height={28} alt="Hawks Media LLC logo" priority style={{ marginTop: 2 }} />
           </Link>
 
           {/* DESKTOP LINKS */}
@@ -258,21 +257,28 @@ const Navbar = () => {
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
               className="nav-cta"
+              aria-label="Get a quote — opens email composer"
             >
               <span>Get a quote</span>
-              <span className="cta-arrow">→</span>
+              <span className="cta-arrow" aria-hidden="true">→</span>
             </a>
           </div>
 
-          {/* MOBILE HAMBURGER */}
-          <button className="nav-hamburger lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* MOBILE HAMBURGER — aria-label fixes the accessibility failure */}
+          <button
+            className="nav-hamburger lg:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav-menu"
+          >
+            {menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </nav>
 
         {/* MOBILE MENU */}
         {menuOpen && (
-          <div className="mobile-menu lg:hidden">
+          <div className="mobile-menu lg:hidden" id="mobile-nav-menu" role="navigation" aria-label="Mobile navigation">
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "18px", padding: "28px 24px 32px" }}>
               {sections.map((sec) => (
                 <button
@@ -283,14 +289,15 @@ const Navbar = () => {
                   {sec}
                 </button>
               ))}
-              <div className="mobile-divider" />
+              <div className="mobile-divider" aria-hidden="true" />
               <a href="tel:+17864850671" className="nav-login" style={{ fontSize: 16 }}>Call Now</a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
                 className="nav-cta" style={{ width: "100%", justifyContent: "center", padding: "13px 24px", fontSize: 16 }}
+                aria-label="Get a quote — opens email composer"
               >
                 <span>Get a quote</span>
-                <span className="cta-arrow">→</span>
+                <span className="cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
