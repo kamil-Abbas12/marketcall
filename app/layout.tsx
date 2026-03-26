@@ -20,7 +20,14 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
   description:
-    "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads. Grow your marketing business with fraud-free, high-converting campaigns.",
+    "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads. Grow your marketing business with fraud-free, high-converting campaigns",
+
+  icons: {
+    icon: "/favicon_optimized.ico",        // main favicon
+    shortcut: "/favicon_32.png",           // browser tab
+    apple: "/favicon_180.png",             // iPhone/iPad
+  },
+
   keywords: [
     "pay per call",
     "performance marketing",
@@ -31,6 +38,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Hawks Media LLC" }],
   creator: "Hawks Media LLC",
   metadataBase: new URL("https://hawksmediallc.com"),
+
   openGraph: {
     title: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
     description:
@@ -39,12 +47,14 @@ export const metadata: Metadata = {
     siteName: "Hawks Media LLC",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Hawks Media LLC — Performance Marketing",
     description:
       "Exclusive pay-per-call leads. Grow your marketing business with Hawks Media.",
   },
+
   robots: {
     index: true,
     follow: true,
