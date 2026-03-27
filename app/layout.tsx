@@ -3,13 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
-// import CursorGlow from "./CursorGlow";
 
-// Single consolidated Outfit import — covers ALL weights used site-wide.
-// Replaces the 3 separate @import calls that were scattered across
-// Navbar.tsx, Footer.tsx, and other component <style> blocks.
-// next/font/google handles preconnect + preload automatically,
-// eliminating the render-blocking Google Fonts requests flagged by Lighthouse.
 const outfit = Outfit({
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
