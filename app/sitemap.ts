@@ -52,6 +52,31 @@ const staticRoutes: MetadataRoute.Sitemap = [
   },
 ];
 
+// Service pages
+const serviceSlugs = [
+  "pay-per-call",
+  "affiliate-marketing",
+  "lead-generation",
+  "performance-advertising",
+  "fraud-prevention",
+  "partner-program",
+];
+
+const serviceRoutes: MetadataRoute.Sitemap = [
+  {
+    url: `${BASE_URL}/services`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  ...serviceSlugs.map((slug) => ({
+    url: `${BASE_URL}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  })),
+];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ─── Dynamic routes example (e.g. blog posts from a CMS) ────────────────
   // Uncomment and adapt when you have dynamic content:
@@ -64,8 +89,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   //   priority: 0.7,
   // }));
   //
-  // return [...staticRoutes, ...blogRoutes];
+  // return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
   // ─────────────────────────────────────────────────────────────────────────
 
-  return staticRoutes;
+  return [...staticRoutes, ...serviceRoutes];
 }
