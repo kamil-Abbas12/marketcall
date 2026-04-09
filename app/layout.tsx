@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads. Grow your marketing business with fraud-free, high-converting campaigns",
 
   icons: {
-    icon: "/favicon_optimized.ico",        // main favicon
-    shortcut: "/favicon_32.png",           // browser tab
+    icon: "/favicon.ico",
+     shortcut: "/favicon_32.png",           // browser tab
     apple: "/favicon_180.png",             // iPhone/iPad
   },
 
