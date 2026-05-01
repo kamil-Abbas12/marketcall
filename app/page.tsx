@@ -1,6 +1,4 @@
-"use client"
 
-import Image from "next/image";
 import Hero from "./component/Hero";
 import Product from "./component/Product";
 import Choose from "./component/Choose";
