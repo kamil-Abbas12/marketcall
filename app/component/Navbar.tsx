@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const scrollSections = ["Product", "Help Center", "Industries", "Company", "Blog"];
+const scrollSections = ["Product", "Help Center", "Industries", "Company", ];
 
 const serviceLinks = [
   { label: "Pay-Per-Call", href: "/services/pay-per-call", desc: "Only pay when the phone rings", icon: "📞" },
@@ -16,13 +16,18 @@ const serviceLinks = [
   { label: "Fraud Prevention", href: "/services/fraud-prevention", desc: "99.8% clean traffic", icon: "🛡️" },
   { label: "Partner Program", href: "/services/partner-program", desc: "Monetize your traffic", icon: "💰" },
 ];
-
+const blogLinks = [
+  { label: "Blog Grid", href: "/blog" },
+];
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [blogOpen, setBlogOpen] =  useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+    const blogWrapRef = useRef<HTMLDivElement | null>(null);
+
   const pathname = usePathname();
   const isServicePage = pathname?.startsWith("/services");
 
@@ -30,6 +35,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 24);
       setServicesOpen(false);
+      setBlogOpen(false)
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,16 +44,34 @@ const Navbar = () => {
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
       if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) setServicesOpen(false);
+            if (blogWrapRef.current && !blogWrapRef.current.contains(e.target as Node)) setBlogOpen(false);
+
     };
     window.addEventListener("mousedown", onDown);
     return () => window.removeEventListener("mousedown", onDown);
   }, []);
 
   const scrollToSection = (id: string) => {
-    if (isServicePage) { window.location.href = `/#${id}`; return; }
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  if (pathname !== "/") {
+    window.location.href = `/#${id}`;
+    return;
+  }
+
+  const el = document.getElementById(id);
+
+  if (el) {
+    const yOffset = -90;
+    const y =
+      el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }
+
+  setMenuOpen(false);
+};
 
   return (
     <>
@@ -304,14 +328,74 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+<div style={{ position: "relative" }} ref={blogWrapRef}>
+  <button
+    className={`nav-link ${blogOpen ? "services-active" : ""}`}
+    onClick={() => setBlogOpen(!blogOpen)}
+    onMouseEnter={() => setBlogOpen(true)}
+    aria-expanded={blogOpen}
+    aria-haspopup="true"
+    aria-label="Blog — open submenu"
+  >
+    Blog
+    <ChevronDown
+      size={14}
+      aria-hidden="true"
+      style={{
+        transition: "transform 0.2s",
+        transform: blogOpen ? "rotate(180deg)" : "rotate(0deg)",
+      }}
+    />
+  </button>
 
+  {blogOpen && (
+    <div
+      className="services-dropdown"
+      onMouseLeave={() => setBlogOpen(false)}
+      role="menu"
+      aria-label="Blog submenu"
+      style={{ width: 260 }}
+    >
+      <div className="dropdown-header">Latest Articles</div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "8px",
+          gap: "4px",
+        }}
+      >
+        {blogLinks.map((blog) => (
+          <Link
+            key={blog.href}
+            href={blog.href}
+            className="dropdown-item"
+            role="menuitem"
+            onClick={() => setBlogOpen(false)}
+          >
+            <span>
+              <span className="dropdown-label">{blog.label}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
             {/* SCROLL SECTIONS */}
-            {scrollSections.map((sec) => (
-              <button key={sec} className="nav-link" onClick={() => scrollToSection(sec)}>
-                {sec}
-              </button>
-            ))}
-          </div>
+
+          {scrollSections.map((sec) => (
+  <button
+    key={sec}
+    className="nav-link"
+    onClick={() => scrollToSection(sec)}
+    aria-label={`Go to ${sec}`}
+  >
+    {sec}
+  </button>
+))}
+          </div> 
 
           {/* DESKTOP ACTIONS */}
           <div className="hidden lg:flex items-center gap-5">
@@ -336,13 +420,56 @@ const Navbar = () => {
           >
             {menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
+          
         </nav>
 
         {/* MOBILE MENU */}
         {menuOpen && (
           <div className="mobile-menu lg:hidden" id="mobile-nav-menu" role="navigation" aria-label="Mobile navigation">
             <div style={{ display: "flex", flexDirection: "column", gap: "14px", padding: "24px 20px 28px" }}>
+<div>
+  <button
+    className="mobile-services-btn"
+    onClick={() => setBlogOpen(!blogOpen)}
+    aria-expanded={blogOpen}
+  >
+    Blog
+    <ChevronDown
+      size={16}
+      aria-hidden="true"
+      style={{
+        transition: "transform 0.2s",
+        transform: blogOpen ? "rotate(180deg)" : "rotate(0deg)",
+      }}
+    />
+  </button>
 
+  {blogOpen && (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+        marginTop: 6,
+        paddingLeft: 4,
+      }}
+    >
+      {blogLinks.map((blog) => (
+        <Link
+          key={blog.href}
+          href={blog.href}
+          className="mobile-service-link"
+          onClick={() => {
+            setMenuOpen(false);
+            setBlogOpen(false);
+          }}
+        >
+          <span>{blog.label}</span>
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
               {/* Mobile Services Accordion */}
               <div>
                 <button
@@ -383,15 +510,19 @@ const Navbar = () => {
                 )}
               </div>
 
-              {scrollSections.map((sec) => (
-                <button
-                  key={sec}
-                  className="mobile-link"
-                  onClick={() => { scrollToSection(sec); setMenuOpen(false); }}
-                >
-                  {sec}
-                </button>
-              ))}
+          {scrollSections.map((sec) => (
+  <button
+    key={sec}
+    className="mobile-link"
+    onClick={() => {
+      scrollToSection(sec);
+      setMenuOpen(false);
+    }}
+    aria-label={`Go to ${sec}`}
+  >
+    {sec}
+  </button>
+))}
 
               <div className="mobile-divider" aria-hidden="true" />
               <a href="tel:+17864850671" className="nav-login" style={{ fontSize: 16, textAlign: "center" }}>Call Now</a>
