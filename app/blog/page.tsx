@@ -31,10 +31,7 @@ export default async function BlogPage({
     : allPosts;
 
   return (
-    <div
-      className="min-h-screen"
-      style={{ background: "#07090f", fontFamily: "'Outfit', sans-serif" }}
-    >
+    <div className="min-h-screen blog-blue-bg" style={{ fontFamily: "'Outfit', sans-serif" }}>
       {/* Ambient glows */}
       <div
         className="fixed pointer-events-none"
@@ -45,7 +42,7 @@ export default async function BlogPage({
           height: "520px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle,#1d4ed833 0%,#1e3a8a22 50%,transparent 70%)",
+            "radial-gradient(circle, rgba(37,99,235,.34) 0%, rgba(30,64,175,.18) 45%, transparent 72%)",
           filter: "blur(80px)",
         }}
       />
@@ -58,19 +55,13 @@ export default async function BlogPage({
           height: "420px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle,#0369a133 0%,#0c4a6e22 50%,transparent 70%)",
+            "radial-gradient(circle, rgba(14,165,233,.26) 0%, rgba(3,105,161,.14) 45%, transparent 72%)",
           filter: "blur(80px)",
         }}
       />
+
       {/* Grid overlay */}
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(96,165,250,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(96,165,250,.04) 1px,transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
+      <div className="fixed inset-0 pointer-events-none blog-grid-overlay" />
 
       <main className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Page header */}
@@ -78,22 +69,24 @@ export default async function BlogPage({
           <div
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-5 tracking-widest uppercase"
             style={{
-              background: "rgba(37,99,235,.12)",
-              border: "1px solid rgba(37,99,235,.25)",
-              color: "#60a5fa",
+              background: "rgba(37,99,235,.14)",
+              border: "1px solid rgba(96,165,250,.22)",
+              color: "#93c5fd",
+              boxShadow: "0 8px 24px rgba(15,23,42,.18)",
             }}
           >
             <span
               className="w-1.5 h-1.5 rounded-full inline-block"
-              style={{ background: "#3b82f6" }}
+              style={{ background: "#60a5fa" }}
             />
             Performance Marketing Blog
           </div>
+
           <h1
             className="text-4xl sm:text-5xl font-black mb-4"
             style={{
               background:
-                "linear-gradient(135deg,#4cc9f0 0%,#4ea8de 35%,#3b82f6 65%,#2563eb 100%)",
+                "linear-gradient(135deg,#dbeafe 0%, #93c5fd 26%, #60a5fa 55%, #38bdf8 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -102,9 +95,10 @@ export default async function BlogPage({
           >
             Insights & Guides
           </h1>
+
           <p
             className="max-w-xl mx-auto text-sm leading-relaxed"
-            style={{ color: "rgba(140,160,185,.7)" }}
+            style={{ color: "rgba(191,219,254,.76)" }}
           >
             Expert resources on pay-per-call, affiliate marketing, lead
             generation, and performance advertising — from practitioners who
@@ -120,19 +114,21 @@ export default async function BlogPage({
             style={
               !activeCategory
                 ? {
-                    background: "linear-gradient(135deg,#1d4ed8,#3b82f6)",
+                    background: "linear-gradient(135deg,#2563eb,#3b82f6)",
                     color: "#fff",
-                    boxShadow: "0 4px 14px rgba(37,99,235,.3)",
+                    boxShadow: "0 8px 22px rgba(37,99,235,.32)",
                   }
                 : {
-                    background: "rgba(255,255,255,.05)",
-                    border: "1px solid rgba(255,255,255,.1)",
-                    color: "rgba(140,160,185,.7)",
+                    background: "rgba(15,23,42,.42)",
+                    border: "1px solid rgba(96,165,250,.14)",
+                    color: "rgba(191,219,254,.76)",
+                    backdropFilter: "blur(10px)",
                   }
             }
           >
             All
           </Link>
+
           {categories.map((cat) => (
             <Link
               key={cat}
@@ -141,14 +137,15 @@ export default async function BlogPage({
               style={
                 activeCategory === cat
                   ? {
-                      background: "linear-gradient(135deg,#1d4ed8,#3b82f6)",
+                      background: "linear-gradient(135deg,#2563eb,#3b82f6)",
                       color: "#fff",
-                      boxShadow: "0 4px 14px rgba(37,99,235,.3)",
+                      boxShadow: "0 8px 22px rgba(37,99,235,.32)",
                     }
                   : {
-                      background: "rgba(255,255,255,.05)",
-                      border: "1px solid rgba(255,255,255,.1)",
-                      color: "rgba(140,160,185,.7)",
+                      background: "rgba(15,23,42,.42)",
+                      border: "1px solid rgba(96,165,250,.14)",
+                      color: "rgba(191,219,254,.76)",
+                      backdropFilter: "blur(10px)",
                     }
               }
             >
@@ -157,12 +154,12 @@ export default async function BlogPage({
           ))}
         </div>
 
-        {/* Featured section — only shown when no category filter active */}
+        {/* Featured section */}
         {!activeCategory && featuredPosts.length > 0 && (
           <section className="mb-14">
             <h2
               className="text-xs font-bold uppercase tracking-widest mb-6"
-              style={{ color: "rgba(96,165,250,.6)" }}
+              style={{ color: "rgba(147,197,253,.72)" }}
             >
               Featured
             </h2>
@@ -179,15 +176,16 @@ export default async function BlogPage({
           {!activeCategory && (
             <h2
               className="text-xs font-bold uppercase tracking-widest mb-6"
-              style={{ color: "rgba(96,165,250,.6)" }}
+              style={{ color: "rgba(147,197,253,.72)" }}
             >
               All Articles
             </h2>
           )}
+
           {filteredPosts.length === 0 ? (
             <p
               className="text-center py-20 text-sm"
-              style={{ color: "rgba(140,160,185,.5)" }}
+              style={{ color: "rgba(191,219,254,.58)" }}
             >
               No articles in this category yet.
             </p>
