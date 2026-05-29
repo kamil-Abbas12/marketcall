@@ -14,5 +14,6 @@ export interface BlogPost {
   content: string;
   canonicalUrl?: string;
   ogImage?: string;
+  coverImage?: string; // filename inside /images/blog/, e.g. "how-to-measure-marketing-performance.webp"
   keywords: string[];
 }

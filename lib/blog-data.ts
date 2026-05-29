@@ -2,6 +2,91 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-measure-marketing-performance",
+    title: "How to Measure Marketing Performance Without Drowning in Data",
+    metaTitle: "How to Measure Marketing Performance Without Drowning in Data | Hawks Media",
+    metaDescription: "Stop tracking everything and start tracking what matters. Learn how to build a performance framework that gives you total clarity on your marketing ROI — without the data hangover.",
+    excerpt: "Every Monday morning the same wall of numbers hits you. Click-through rates, impressions, cost-per-lead — but is any of it actually working? Here's how to cut through the noise and track what matters.",
+    category: "Performance Marketing",
+    tags: ["marketing analytics", "KPIs", "marketing performance", "data-driven marketing", "vanity metrics"],
+    author: "Hawks Media Team",
+    authorTitle: "Performance Marketing Experts",
+    publishedAt: "2025-05-22",
+    readingTime: 7,
+    featured: true,
+    coverImage: "/how-to-measure-marketing-performance.webp",
+    keywords: ["how to measure marketing performance", "marketing KPIs", "marketing analytics framework", "vanity metrics", "marketing ROI"],
+    content: `
+## How to Measure Marketing Performance Without Drowning in Data
+
+Every Monday morning, it happens the same way. You open your analytics dashboard, intent on checking how your campaigns are doing, and you're instantly hit with a wall of numbers.
+
+Click-through rates are up, but cost-per-lead is fluctuating. Impressions look great, but the sales team says the pipeline feels quiet. There are hundreds of data points, dozens of charts, and a lingering, frustrating question: Is our marketing actually working, or are we just making graphs?
+
+It's easy to get trapped in the data bog. When everything is measurable, we fall into the trap of measuring everything.
+
+But looking at every single metric isn't data-driven marketing. It's just stressful. To scale your business without losing your mind, you need to shift from tracking everything to tracking what matters.
+
+Here is how to cut through the noise and build a performance framework that gives you total clarity, without the data hangover.
+
+---
+
+## 1. Separate the "Engine" from the "Dashboard"
+
+Think of your marketing like a car. To drive safely, you only need to look at a few things on your dashboard: your speed, your fuel level, and maybe a check-engine light. You don't need a live feed of your transmission fluid temperature or alternator voltage while you're cruising down the highway.
+
+In marketing, metrics fall into two distinct buckets:
+
+- **KPIs (Key Performance Indicators):** These are your dashboard. They tell you if you are arriving at your destination profitably. Examples include Customer Acquisition Cost (CAC), Return on Ad Spend (ROAS), and Total Revenue Generated.
+- **Diagnostic Metrics:** This is what's under the hood. Click-through rates (CTR), cost-per-click (CPC), and bounce rates don't pay the bills, but they help you fix a KPI that's broken.
+
+**The Rule:** Only review your KPIs weekly or biweekly. Leave the diagnostic metrics for when a KPI starts dipping and you need to figure out why.
+
+---
+
+## 2. Focus on "High-Intent" Milestones
+
+A common way to drown in data is tracking every micro-action a prospect takes. Did they scroll 50% down the landing page? Did they click the image or the text link?
+
+While that data can be useful for deep optimization down the road, it distracts from the ultimate goal. Instead, focus your tracking on high-intent milestones — the specific actions that prove a prospect is actively moving toward buying.
+
+| Stage | What to Ignore (The Noise) | What to Track (The Signal) |
+|---|---|---|
+| Top of Funnel | Raw Impressions, Likes, Social Shares | High-Intent Inbound Actions (e.g., Form fills, inbound calls, demo requests) |
+| Middle of Funnel | Total Page Views, Average Time on Site | Lead Quality Rate (The percentage of leads that actually match your target buyer profile) |
+| Bottom of Funnel | Total email opens | Conversion-to-Revenue Rate & Velocity (How fast a qualified lead becomes a customer) |
+
+By anchoring your performance to high-intent milestones, you instantly eliminate 80% of the fluff from your reports.
+
+---
+
+## 3. Build a "North Star" Visual Framework
+
+If your marketing report requires a 20-minute explanation, it's too complicated. A clean performance framework should visually connect your spending directly to your revenue, letting you see campaign health at a glance.
+
+The interactive framework below lets you test how balancing your marketing math actually impacts your bottom line. You can adjust the core levers like your budget, lead cost, and conversion rate to see how simple changes under the hood ripple out to your actual ROI.
+
+---
+
+## 4. Kill the Vanity Metrics
+
+If a metric makes you feel good but doesn't influence your cash flow, it's a vanity metric.
+
+- An ad with 100,000 views looks amazing on a slideshow, but if it generated zero phone calls or sales inquiries, its business value is zero.
+- A blog post that ranks #1 for a massive keyword is great, but if that traffic leaves without engaging, it's just a drain on your hosting server.
+
+Be brutal with your analytics tracking. If you can't trace a metric back to a strategic decision or revenue outcome, stop looking at it every day. Put it on a monthly or quarterly review list, or drop it entirely.
+
+---
+
+## The Bottom Line
+
+Data should empower you to make quick, confident decisions, not paralyze you. By focusing strictly on high-intent lead generation, keeping your diagnostic tools under the hood until they are needed, and tracking a few core KPIs, you keep your marketing strategy agile, predictable, and highly profitable.
+
+Stop drowning in the decimals. Focus on the pipeline.
+    `,
+  },
+  {
     slug: "what-is-pay-per-call-marketing",
     title: "What Is Pay-Per-Call Marketing? The Complete 2025 Guide",
     metaTitle: "What Is Pay-Per-Call Marketing? Complete Guide 2025 | Hawks Media",
@@ -620,7 +705,9 @@ Our 98% advertiser retention rate exists because our clients trust that every bi
 ];
 
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  return blogPosts.sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
@@ -633,5 +720,11 @@ export function getFeaturedPosts(): BlogPost[] {
 
 export function getAllCategories(): string[] {
   const seen = new Set<string>();
-  return blogPosts.map((p) => p.category).filter((c) => { if (seen.has(c)) return false; seen.add(c); return true; });
+  return blogPosts
+    .map((p) => p.category)
+    .filter((c) => {
+      if (seen.has(c)) return false;
+      seen.add(c);
+      return true;
+    });
 }
