@@ -26,13 +26,75 @@ export default async function BlogPage({
   const categories = getAllCategories();
 
   const activeCategory = resolvedParams.category ?? null;
-  const filteredPosts = activeCategory
-    ? allPosts.filter((p) => p.category === activeCategory)
-    : allPosts;
+ const filteredPosts = activeCategory
+  ? allPosts.filter((p) => p.category === activeCategory)
+  : allPosts.filter((p) => !p.featured); 
 
   return (
-    <div className="min-h-screen blog-blue-bg" style={{ fontFamily: "'Outfit', sans-serif" }}>
-      {/* Ambient glows */}
+<div
+  className="min-h-screen"
+  style={{
+    fontFamily: "'Outfit', sans-serif",
+    background: "linear-gradient(180deg, #060913 0%, #08101d 48%, #060a12 100%)",
+  }}
+>
+  {/* Ambient glow top-left */}
+  <div
+    className="fixed pointer-events-none"
+    style={{
+      top: "-180px",
+      left: "-120px",
+      width: "560px",
+      height: "560px",
+      borderRadius: "50%",
+      background:
+        "radial-gradient(circle, rgba(37,99,235,.46) 0%, rgba(30,64,175,.24) 42%, transparent 72%)",
+      filter: "blur(90px)",
+    }}
+  />
+  {/* Ambient glow bottom-right */}
+  <div
+    className="fixed pointer-events-none"
+    style={{
+      bottom: "-160px",
+      right: "-90px",
+      width: "460px",
+      height: "460px",
+      borderRadius: "50%",
+      background:
+        "radial-gradient(circle, rgba(14,165,233,.34) 0%, rgba(3,105,161,.18) 45%, transparent 72%)",
+      filter: "blur(90px)",
+    }}
+  />
+  {/* Centre radial tint */}
+  <div
+    className="fixed pointer-events-none"
+    style={{
+      top: "20%",
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "320px",
+      height: "320px",
+      borderRadius: "50%",
+      background: "radial-gradient(circle, rgba(59,130,246,.16) 0%, transparent 72%)",
+      filter: "blur(80px)",
+    }}
+  />
+  {/* Grid overlay */}
+  <div
+    className="fixed inset-0 pointer-events-none"
+    style={{
+      backgroundImage: `
+        linear-gradient(rgba(96,165,250,.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96,165,250,.09) 1px, transparent 1px),
+        linear-gradient(rgba(96,165,250,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96,165,250,.03) 1px, transparent 1px)
+      `,
+      backgroundSize: "56px 56px, 56px 56px, 14px 14px, 14px 14px",
+      WebkitMaskImage: "radial-gradient(circle at center, black 72%, transparent 100%)",
+      maskImage: "radial-gradient(circle at center, black 72%, transparent 100%)",
+    }}
+  />      {/* Ambient glows */}
       <div
         className="fixed pointer-events-none"
         style={{
@@ -165,8 +227,9 @@ export default async function BlogPage({
             </h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {featuredPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} featured />
-              ))}
+  <BlogCard key={`featured-${post.slug}`} post={post} featured />
+))}
+
             </div>
           </section>
         )}
@@ -191,9 +254,9 @@ export default async function BlogPage({
             </p>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {filteredPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
+             {filteredPosts.map((post) => (
+  <BlogCard key={`all-${post.slug}`} post={post} />
+))}
             </div>
           )}
         </section>
