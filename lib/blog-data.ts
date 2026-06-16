@@ -820,7 +820,7 @@ If you approach it looking for overnight virality, you will likely waste your mo
   publishedAt: "2026-06-16",
   readingTime: 8,
   featured: false,
-  coverImage: "/landing-page-conversion.webp",
+  coverImage: "/high-converting-landing-page-anatomy.webp",
   keywords: [
     "high converting landing pages",
     "landing page optimization",
@@ -860,11 +860,11 @@ Once a visitor lands at the top, every element should naturally slide them down 
 
 When someone lands on your page, a timer starts in their brain.
 
-You have about five seconds to answer three questions:
-
-- What is this?
-- What's in it for me?
-- What do I do next?
+<ul>
+  <li><em>What is this?</em></li>
+  <li><em>What's in it for me?</em></li>
+  <li><em>What do I do next?</em></li>
+</ul>
 
 If your headline is:
 
