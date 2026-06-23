@@ -40,6 +40,14 @@ export const metadata: Metadata = {
       "Connect with elite affiliates and grow your revenue with Hawks Media's pay-per-call platform.",
     url: "https://hawksmediallc.com",
     siteName: "Hawks Media LLC",
+     images: [
+      {
+        url: "https://hawksmediallc.com/log.png",
+        width: 1200,
+        height: 630,
+        alt: "Hawks Media LLC - Performance Marketing & Pay-Per-Call Leads",
+      },
+    ],
     type: "website",
   },
 
