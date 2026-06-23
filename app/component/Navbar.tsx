@@ -4,10 +4,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-const scrollSections = ["Product", "Help Center", "Industries", "Company"];
-
+const pageLinks = [
+  { label: "Product", href: "/product" },
+  { label: "Help Center", href: "/help-center" },
+  { label: "Industries", href: "/industries" },
+  { label: "Company", href: "/company" },
+];
 const serviceLinks = [
   {
     label: "Pay-Per-Call",
@@ -65,7 +68,6 @@ const Navbar = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const blogWrapRef = useRef<HTMLDivElement | null>(null);
 
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,30 +106,7 @@ const Navbar = () => {
       window.removeEventListener("mousedown", onDown);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    if (pathname !== "/") {
-      window.location.href = `/#${id}`;
-      return;
-    }
 
-    const el = document.getElementById(id);
-
-    if (el) {
-      const yOffset = -90;
-
-      const y =
-        el.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth",
-      });
-    }
-
-    setMenuOpen(false);
-  };
 
   return (
     <>
@@ -504,16 +483,16 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* SECTIONS */}
-            {scrollSections.map((sec) => (
-              <button
-                key={sec}
-                className="nav-link"
-                onClick={() => scrollToSection(sec)}
-              >
-                {sec}
-              </button>
-            ))}
+         {/* PAGES */}
+{pageLinks.map((item) => (
+  <Link
+    key={item.href}
+    href={item.href}
+    className="nav-link"
+  >
+    {item.label}
+  </Link>
+))}
           </div>
 
           {/* MOBILE BUTTON */}
@@ -636,19 +615,17 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* SECTIONS */}
-              {scrollSections.map((sec) => (
-                <button
-                  key={sec}
-                  className="mobile-link"
-                  onClick={() => {
-                    scrollToSection(sec);
-                    setMenuOpen(false);
-                  }}
-                >
-                  {sec}
-                </button>
-              ))}
+           {/* PAGES */}
+{pageLinks.map((item) => (
+  <Link
+    key={item.href}
+    href={item.href}
+    className="mobile-link"
+    onClick={() => setMenuOpen(false)}
+  >
+    {item.label}
+  </Link>
+))}
 
               <div className="mobile-divider" />
 

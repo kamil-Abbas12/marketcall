@@ -77,20 +77,24 @@ const serviceRoutes: MetadataRoute.Sitemap = [
   })),
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // ─── Dynamic routes example (e.g. blog posts from a CMS) ────────────────
-  // Uncomment and adapt when you have dynamic content:
-  //
-  // const posts = await fetch("https://your-cms.io/api/posts").then(r => r.json());
-  // const blogRoutes: MetadataRoute.Sitemap = posts.map((post: { slug: string; updatedAt: string }) => ({
-  //   url: `${BASE_URL}/blog/${post.slug}`,
-  //   lastModified: new Date(post.updatedAt),
-  //   changeFrequency: "weekly",
-  //   priority: 0.7,
-  // }));
-  //
-  // return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
-  // ─────────────────────────────────────────────────────────────────────────
+const blogSlugs = [
+  "real-roi-influencer-marketing-local-business",
+  "how-to-measure-marketing-performance",
+  "anatomy-of-high-converting-landing-pages",
+  "performance-marketing-vs-traditional-advertising",
+  "lead-generation-strategies-2025",
+  "how-to-choose-affiliate-network-2025",
+  "affiliate-marketing-fraud-prevention-guide",
+  "what-is-pay-per-call-marketing",
+];
 
-  return [...staticRoutes, ...serviceRoutes];
+const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+  url: `${BASE_URL}/blog/${slug}`,
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.7,
+}));
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 }

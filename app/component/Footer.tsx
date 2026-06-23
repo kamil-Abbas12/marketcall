@@ -218,9 +218,9 @@ export default function Footer() {
             <div>
               <div className="footer-col-head">Follow Us</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }} role="list" aria-label="Social media links">
-                <a href="" className="footer-social fb" aria-label="Follow Hawks Media on Facebook" role="listitem">
+                {/* <a href="" className="footer-social fb" aria-label="Follow Hawks Media on Facebook" role="listitem">
                   <Facebook size={17} aria-hidden="true" />
-                </a>
+                </a> */}
                 <a href="https://www.instagram.com/_hawksmedia_/" className="footer-social ig" aria-label="Follow Hawks Media on Instagram" role="listitem" target="_blank" rel="noopener noreferrer">
                   <Instagram size={17} aria-hidden="true" />
                 </a>

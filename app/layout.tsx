@@ -12,11 +12,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
+  // ── CHANGED: title is now an object with a template ──
+  title: {
+    default: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
+    template: "%s | Hawks Media LLC",
+  },
   description:
     "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads. Grow your marketing business with fraud-free, high-converting campaigns",
-
- 
 
   keywords: [
     "pay per call",
@@ -28,6 +30,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Hawks Media LLC" }],
   creator: "Hawks Media LLC",
   metadataBase: new URL("https://hawksmediallc.com"),
+
+  // ── NEW ──
+  alternates: { canonical: "https://hawksmediallc.com" },
 
   openGraph: {
     title: "Hawks Media LLC - Performance Marketing & Pay-Per-Call Leads",
@@ -51,6 +56,20 @@ export const metadata: Metadata = {
   },
 };
 
+// ── NEW: schema object, declared outside the component ──
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Hawks Media LLC",
+  url: "https://hawksmediallc.com",
+  description:
+    "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads and performance marketing campaigns.",
+  sameAs: [
+    "https://www.instagram.com/_hawksmedia_/",
+    "https://www.linkedin.com/company/hawks-media-llc/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +78,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         {/* <CursorGlow /> */}
         <Navbar />
         {children}
