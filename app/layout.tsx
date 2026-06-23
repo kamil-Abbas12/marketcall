@@ -82,6 +82,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="8Ba51eFBF9u1GbNoCJXk2g" async></script>
         {/* <CursorGlow /> */}
         <Navbar />
         {children}
