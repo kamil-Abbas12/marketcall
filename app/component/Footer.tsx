@@ -207,10 +207,15 @@ export default function Footer() {
                     <ArrowUpRight size={13} className="link-arrow" aria-hidden="true" />
                   </button>
                 ))}
-                <Link href="/privacy-policy" className="footer-service-link">
-                  Privacy Policy
-                  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
-                </Link>
+             {/* After the scrollSections.map(...) block, alongside Privacy Policy */}
+<Link href="/cellphone" className="footer-service-link">
+  Cellphone
+  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
+</Link>
+<Link href="/privacy-policy" className="footer-service-link">
+  Privacy Policy
+  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
+</Link>
               </div>
             </nav>
 
@@ -237,9 +242,11 @@ export default function Footer() {
               © {new Date().getFullYear()} Hawks Media LLC — All rights reserved.
             </span>
             <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+
               <Link href="/privacy-policy" style={{ fontSize: 13, color: "rgba(96,165,250,0.4)", textDecoration: "none" }}>
                 Privacy Policy
               </Link>
+
               <div className="footer-bottom-badge" aria-label="System status: operational">
                 <div className="badge-dot-sm" aria-hidden="true" />
                 All systems operational

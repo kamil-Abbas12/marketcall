@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pageLinks = [
+    { label: "Cellphone", href: "/cellphone" },
   { label: "Product", href: "/product" },
   { label: "Help Center", href: "/help-center" },
   { label: "Industries", href: "/industries" },
