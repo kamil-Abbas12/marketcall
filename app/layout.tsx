@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Hawks Media LLC",
      images: [
       {
-        url: "https://hawksmediallc.com/log.png",
+        url: "https://hawksmediallc.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Hawks Media LLC - Performance Marketing & Pay-Per-Call Leads",

@@ -344,7 +344,7 @@ const Navbar = () => {
             }}
           >
             <Image
-              src="/new.png"
+              src="/logo.png"
               width={130}
               height={28}
               alt="logo"
