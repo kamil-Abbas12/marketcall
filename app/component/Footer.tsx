@@ -153,7 +153,7 @@ export default function Footer() {
             {/* Brand col */}
             <div style={{ minWidth: 120 }}>
               <Image
-                src="/new.png"
+                src="/logo.png"
                 alt="Hawks Media LLC"
                 width={120}
                 height={70}
