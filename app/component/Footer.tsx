@@ -17,6 +17,16 @@ const serviceLinks = [
 ];
 
 export default function Footer() {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMobile(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
+  }, []);
+
+  const ctaHref = isMobile
+    ? "https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+    : "mailto:info@hawksmediallc.com";
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -133,9 +143,11 @@ export default function Footer() {
               <div className="cta-band-sub">Get exclusive pay-per-call leads delivered to you today.</div>
             </div>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
+              href={ctaHref}
               className="footer-cta-btn"
               aria-label="Get started with Hawks Media"
+              target={isMobile ? "_blank" : undefined}
+              rel={isMobile ? "noopener noreferrer" : undefined}
             >
               <span>Get started</span>
               <ArrowUpRight size={16} style={{ position: "relative", zIndex: 1 }} aria-hidden="true" />
@@ -207,15 +219,15 @@ export default function Footer() {
                     <ArrowUpRight size={13} className="link-arrow" aria-hidden="true" />
                   </button>
                 ))}
-             {/* After the scrollSections.map(...) block, alongside Privacy Policy */}
-<Link href="/cellphone" className="footer-service-link">
-  Cellphone
-  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
-</Link>
-<Link href="/privacy-policy" className="footer-service-link">
-  Privacy Policy
-  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
-</Link>
+                {/* After the scrollSections.map(...) block, alongside Privacy Policy */}
+                <Link href="/cellphone" className="footer-service-link">
+                  Cellphone
+                  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
+                </Link>
+                <Link href="/privacy-policy" className="footer-service-link">
+                  Privacy Policy
+                  <ArrowUpRight size={11} className="link-arrow" aria-hidden="true" />
+                </Link>
               </div>
             </nav>
 
@@ -258,48 +270,3 @@ export default function Footer() {
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
