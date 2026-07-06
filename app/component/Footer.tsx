@@ -16,16 +16,30 @@ const serviceLinks = [
   { label: "Partner Program", href: "/services/partner-program" },
 ];
 
+const GMAIL_COMPOSE_URL = "https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com";
+const MAILTO_URL = "mailto:info@hawksmediallc.com";
+
 export default function Footer() {
-  const [isMobile, setIsMobile] = React.useState(false);
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
 
-  React.useEffect(() => {
-    setIsMobile(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
-  }, []);
+    let blurred = false;
+    const onBlur = () => {
+      blurred = true;
+    };
+    window.addEventListener("blur", onBlur);
 
-  const ctaHref = isMobile
-    ? "https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com"
-    : "mailto:info@hawksmediallc.com";
+    // Try the native mail client first.
+    window.location.href = MAILTO_URL;
+
+    // If nothing opened (no mail client registered), fall back to Gmail web compose.
+    window.setTimeout(() => {
+      window.removeEventListener("blur", onBlur);
+      if (!blurred) {
+        window.open(GMAIL_COMPOSE_URL, "_blank", "noopener,noreferrer");
+      }
+    }, 600);
+  };
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -143,11 +157,10 @@ export default function Footer() {
               <div className="cta-band-sub">Get exclusive pay-per-call leads delivered to you today.</div>
             </div>
             <a
-              href={ctaHref}
+              href={MAILTO_URL}
+              onClick={handleEmailClick}
               className="footer-cta-btn"
               aria-label="Get started with Hawks Media"
-              target={isMobile ? "_blank" : undefined}
-              rel={isMobile ? "noopener noreferrer" : undefined}
             >
               <span>Get started</span>
               <ArrowUpRight size={16} style={{ position: "relative", zIndex: 1 }} aria-hidden="true" />
