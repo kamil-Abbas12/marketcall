@@ -173,9 +173,9 @@ export default function Footer() {
                   <span className="footer-contact-icon" aria-hidden="true"><Mail size={14} /></span>
                   Billing@hawksmediallc.com
                 </a>
-                <a href="mailto:HR@hawksmediallc.com" className="footer-contact-link">
+                <a href="mailto:hr@hawksmediallc.com" className="footer-contact-link">
                   <span className="footer-contact-icon" aria-hidden="true"><Mail size={14} /></span>
-                  HR@hawksmediallc.com
+                  hr@hawksmediallc.com
                 </a>
                 <a href="tel:+17864850671" className="footer-contact-link">
                   <span className="footer-contact-icon" aria-hidden="true"><Phone size={14} /></span>
