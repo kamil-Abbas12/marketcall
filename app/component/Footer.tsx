@@ -17,30 +17,8 @@ const serviceLinks = [
 ];
 
 const GMAIL_COMPOSE_URL = "https://mail.google.com/mail/?view=cm&fs=1&to=info@hawksmediallc.com";
-const MAILTO_URL = "mailto:info@hawksmediallc.com";
 
 export default function Footer() {
-  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    let blurred = false;
-    const onBlur = () => {
-      blurred = true;
-    };
-    window.addEventListener("blur", onBlur);
-
-    // Try the native mail client first.
-    window.location.href = MAILTO_URL;
-
-    // If nothing opened (no mail client registered), fall back to Gmail web compose.
-    window.setTimeout(() => {
-      window.removeEventListener("blur", onBlur);
-      if (!blurred) {
-        window.open(GMAIL_COMPOSE_URL, "_blank", "noopener,noreferrer");
-      }
-    }, 600);
-  };
-
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -157,8 +135,9 @@ export default function Footer() {
               <div className="cta-band-sub">Get exclusive pay-per-call leads delivered to you today.</div>
             </div>
             <a
-              href={MAILTO_URL}
-              onClick={handleEmailClick}
+              href={GMAIL_COMPOSE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="footer-cta-btn"
               aria-label="Get started with Hawks Media"
             >
