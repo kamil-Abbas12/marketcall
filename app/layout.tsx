@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
+import Script from "next/script";
 
 const outfit = Outfit({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -86,7 +87,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-       <script
+        {/* Google Analytics */}
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-T5F6P3EJX9"
+    strategy="afterInteractive"
+  />
+
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5F6P3EJX9');
+    `}
+  </Script>
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
