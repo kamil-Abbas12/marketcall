@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+// TypeScript may not have declarations for CSS modules in this setup.
+// @ts-ignore: implicit any for side-effect import of CSS
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
