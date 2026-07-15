@@ -82,8 +82,8 @@ const blogSlugs = [
   "how-to-measure-marketing-performance",
   "anatomy-of-high-converting-landing-pages",
   "performance-marketing-vs-traditional-advertising",
-  "lead-generation-strategies-2025",
-  "how-to-choose-affiliate-network-2025",
+  "lead-generation-strategies-2026",
+  "how-to-choose-affiliate-network-2026",
   "affiliate-marketing-fraud-prevention-guide",
   "what-is-pay-per-call-marketing",
 ];
