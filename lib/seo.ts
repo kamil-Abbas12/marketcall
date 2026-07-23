@@ -25,7 +25,7 @@ export const SERVICE_SEO: Record<
     title: "Pay-Per-Call Marketing",
     metaTitle: "Pay-Per-Call Marketing Services | Only Pay for Real Calls | Hawks Media",
     metaDescription:
-      "Stop wasting ad budget on clicks that never convert. Hawks Media's pay-per-call marketing delivers verified, high-intent inbound calls. Only pay when the phone rings.",
+     "Stop wasting ad budget on clicks that never convert. Get verified, high-intent inbound calls — only pay when the phone rings.",
     keywords: ["pay per call marketing", "pay per call leads", "inbound call marketing", "performance marketing calls", "pay per call advertising", "call generation"],
     h1: "Pay-Per-Call Marketing - Only Pay When the Phone Rings",
     canonical: `${SITE_URL}/services/pay-per-call`,
@@ -101,7 +101,7 @@ export const SERVICE_SEO: Record<
     title: "Fraud Prevention",
     metaTitle: "Ad Fraud Prevention & Traffic Verification | Hawks Media",
     metaDescription:
-      "Protect your ad spend with Hawks Media's advanced fraud prevention system. Real-time traffic verification, bot detection, and call validation. 99.8% clean traffic.",
+     "Protect your ad spend with real-time fraud detection, bot filtering, and call validation. 99.8% clean traffic guaranteed."
     keywords: ["ad fraud prevention", "click fraud protection", "traffic verification", "call fraud detection", "bot traffic detection", "invalid traffic prevention"],
     h1: "Ad Fraud Prevention - Protect Every Dollar of Your Ad Spend",
     canonical: `${SITE_URL}/services/fraud-prevention`,
@@ -120,7 +120,7 @@ export const SERVICE_SEO: Record<
     title: "Partner Program",
     metaTitle: "Publisher & Partner Program | Weekly Payouts | Hawks Media",
     metaDescription:
-      "Monetize your traffic with Hawks Media's partner program. Access 120+ countries, curated high-value offers, free promo tools, and consistent weekly payments. Join free!",
+      "Monetize your traffic with Hawks Media's partner program. Access 120+ countries, curated offers, free tools, and weekly payments.",
     keywords: ["publisher program", "partner program", "monetize traffic", "affiliate partner", "weekly payouts affiliate", "traffic monetization"],
     h1: "Partner Program - Monetize Your Traffic With Industry-Leading Payouts",
     canonical: `${SITE_URL}/services/partner-program`,

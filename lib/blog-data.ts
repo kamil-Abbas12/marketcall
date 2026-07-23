@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-measure-marketing-performance",
     title: "How to Measure Marketing Performance Without Drowning in Data",
     metaTitle: "How to Measure Marketing Performance Without Drowning in Data | Hawks Media",
-    metaDescription: "Stop tracking everything and start tracking what matters. Learn how to build a performance framework that gives you total clarity on your marketing ROI — without the data hangover.",
+metaDescription: "Stop tracking everything and start tracking what matters. Build a performance framework that gives total clarity on your marketing ROI.",
     excerpt: "Every Monday morning the same wall of numbers hits you. Click-through rates, impressions, cost-per-lead — but is any of it actually working? Here's how to cut through the noise and track what matters.",
     category: "Performance Marketing",
     tags: ["marketing analytics", "KPIs", "marketing performance", "data-driven marketing", "vanity metrics"],
@@ -90,7 +90,8 @@ Stop drowning in the decimals. Focus on the pipeline.
     slug: "what-is-pay-per-call-marketing",
     title: "What Is Pay-Per-Call Marketing? The Complete 2026 Guide",
     metaTitle: "What Is Pay-Per-Call Marketing? Complete Guide 2026 | Hawks Media",
-    metaDescription: "Discover how pay-per-call marketing works, why it outperforms cost-per-click, and how advertisers achieve 10–30x higher conversion rates with inbound phone leads.",
+ metaDescription: "Discover how pay-per-call marketing works and why advertisers see 10–30x higher conversion rates with inbound phone leads.",
+
     excerpt: "Pay-per-call is the fastest-growing performance channel. Learn how it works, who it's for, and why top advertisers are shifting budgets to inbound phone leads.",
     category: "Pay-Per-Call",
     tags: ["pay per call", "performance marketing", "lead generation", "inbound calls", "advertisers"],
@@ -426,7 +427,8 @@ The most resilient programs don't rely on a single channel. Build 2–3 compleme
     slug: "performance-marketing-vs-traditional-advertising",
     title: "Performance Marketing vs. Traditional Advertising: Which Wins in 2026?",
     metaTitle: "Performance Marketing vs Traditional Advertising: Full Comparison 2026 | Hawks Media",
-    metaDescription: "Compare performance marketing vs traditional advertising on ROI, attribution, scalability, and risk. Find out why brands are shifting $100B+ to performance channels.",
+   metaDescription: "Compare performance marketing vs traditional advertising on ROI, attribution, and risk. See why brands are shifting $100B+ to performance.",
+
     excerpt: "Traditional advertising is losing market share at an unprecedented rate. Here's a data-driven comparison and why the shift is accelerating.",
     category: "Performance Marketing",
     tags: ["performance marketing", "digital advertising", "ROI", "brand marketing", "attribution"],
@@ -524,7 +526,8 @@ For the majority of growth-stage businesses — especially in insurance, financi
     slug: "how-to-choose-affiliate-network-2026",
     title: "How to Choose the Best Affiliate Network in 2026 (7 Critical Criteria)",
     metaTitle: "How to Choose the Best Affiliate Network in 2026 | Hawks Media",
-    metaDescription: "Picking the wrong affiliate network costs you time, money, and commissions. Here are 7 critical criteria to evaluate any affiliate network before you sign up.",
+   metaDescription: "Picking the wrong affiliate network costs time and money. Here are 7 critical criteria to evaluate before you sign up.",
+
     excerpt: "Not all affiliate networks are created equal. The wrong choice means shaved commissions, late payments, and low-quality offers. Here's how to evaluate any network with confidence.",
     category: "Affiliate Marketing",
     tags: ["affiliate network", "affiliate program", "publisher", "performance network", "commission"],
@@ -611,7 +614,8 @@ Hawks Media has built its reputation on affiliate-first policies: transparent re
     slug: "affiliate-marketing-fraud-prevention-guide",
     title: "Affiliate Marketing Fraud: How to Detect, Prevent, and Fight Back",
     metaTitle: "Affiliate Marketing Fraud Prevention Guide 2026 | Hawks Media",
-    metaDescription: "Affiliate marketing fraud costs advertisers $3.4B annually. Learn the 8 most common fraud types, how to detect them, and the tools elite networks use to prevent them.",
+    metaDescription: "Affiliate fraud costs advertisers $3.4B annually. Learn the 8 most common fraud types and the tools networks use to stop them.",
+
     excerpt: "Ad fraud is the silent budget killer. In affiliate and pay-per-call marketing, fraud can drain campaign budgets and destroy advertiser trust. Here's how to detect and eliminate it.",
     category: "Fraud Prevention",
     tags: ["ad fraud", "affiliate fraud", "fraud prevention", "click fraud", "call fraud"],
@@ -707,7 +711,8 @@ Our 98% advertiser retention rate exists because our clients trust that every bi
     slug: "real-roi-influencer-marketing-local-business",
     title: "The Real ROI of Influencer Marketing for Local Businesses",
     metaTitle: "The Real ROI of Influencer Marketing for Local Businesses | Hawks Media",
-    metaDescription: "Forget the billion-dollar influencer industry headlines. Learn how local businesses can use nano and micro-influencers to drive real foot traffic, trackable ROI, and reusable content.",
+    metaDescription: "Forget the billion-dollar influencer headlines. Learn how local businesses use nano and micro-influencers to drive real foot traffic.",
+
     excerpt: "National influencer stats don't apply to a 10-mile radius. Here's how local businesses can use nano and micro-creators to drive measurable foot traffic — and the content assets that come with it.",
     category: "Marketing Strategy",
     tags: ["influencer marketing", "local business marketing", "nano-influencers", "micro-influencers", "marketing ROI", "content strategy"],
@@ -1101,8 +1106,8 @@ The answer will tell you exactly what needs fixing.
   title: "Branding Mistakes That Make Companies Look Untrustworthy Online",
   metaTitle:
     "Branding Mistakes That Make Companies Look Untrustworthy Online | Hawks Media",
-  metaDescription:
-    "Discover the five branding mistakes that make companies look untrustworthy online. Learn how to build credibility, strengthen your brand identity, and increase customer trust.",
+  metaDescription: "Discover five branding mistakes that make companies look untrustworthy online, and how to build credibility and customer trust.",
+
   excerpt:
     "Many businesses lose customers before the first conversation because their branding creates doubt. Learn the five biggest branding mistakes that damage trust online and how to fix them.",
   category: "Branding Strategy",
@@ -1239,7 +1244,9 @@ If you claim to be the top lead generator or the most reliable contractor in the
     slug: "brand-reputation-management-online-reviews",
     title: "Brand Reputation in the Age of Reviews and Comments: How to Win Trust Online",
     metaTitle: "Brand Reputation Management in the Age of Reviews & Comments | Hawks Media",
-    metaDescription: "Learn how to manage your brand reputation in 2026 — from handling negative reviews and social comments to turning critics into advocates with proactive online listening.",
+   metaDescription: "Learn how to manage your brand reputation in 2026 — from handling negative reviews to turning critics into advocates.",
+
+
     excerpt: "A single tweet or 1-star review can ripple across the internet before your social team finishes their coffee. Here's how brands build a reputation that survives the review economy.",
     category: "Brand Reputation",
     tags: ["brand reputation management", "online reviews", "customer service", "social listening", "crisis management"],
@@ -1332,7 +1339,8 @@ The brands that win today aren't the ones that never mess up; they are the ones 
   slug: "small-businesses-beat-big-brands-video-marketing",
   title: "How Small Businesses Can Beat Big Brands at Video Marketing",
   metaTitle: "How Small Businesses Can Beat Big Brands at Video Marketing | Hawks Media",
-  metaDescription: "You don't need a Hollywood budget to win at video marketing. Learn how small businesses can use authenticity, teaching content, and smart systems to outperform big-brand video ads.",
+  metaDescription: "You don't need a Hollywood budget for video marketing. Learn how small businesses use authenticity to outperform big-brand ads.",
+
   excerpt: "Big brands have the budget, but audiences have corporate fatigue. Here's how small businesses can lean into raw authenticity to dominate video marketing without a Hollywood budget.",
   category: "Marketing Strategy",
   tags: ["video marketing", "small business marketing", "content strategy", "social media marketing", "TikTok marketing", "authenticity"],
@@ -1432,7 +1440,9 @@ Stop trying to copy the sleek, sanitized look of the corporate giants. Embrace t
   slug: "short-form-vs-long-form-content-brand-strategy",
   title: "Short-Form vs Long-Form Content: What Should Your Brand Prioritize",
   metaTitle: "Short-Form vs Long-Form Content: What Should Your Brand Prioritize | Hawks Media",
-  metaDescription: "Short-form or long-form content — which should your brand focus on? Learn the strengths, weaknesses, and the Hub & Spoke strategy that lets you win with both.",
+ metaDescription: "Short-form or long-form content — which should your brand focus on? Learn the Hub & Spoke strategy that lets you win with both.",
+
+
   excerpt: "Attention spans are dead, or authority requires 2,000-word guides — so which is it? Here's the truth about short-form vs long-form content and how the smartest brands use both.",
   category: "Content Strategy",
   tags: ["content strategy", "short-form content", "long-form content", "hub and spoke", "content marketing", "social media strategy"],
@@ -1531,7 +1541,7 @@ Are you leaning too heavily into the quick-win feeds, or are you hiding behind m
   slug: "how-media-agency-builds-campaign-brief-to-launch",
   title: "How a Media Agency Builds a Campaign from Brief to Launch",
   metaTitle: "How a Media Agency Builds a Campaign from Brief to Launch | Hawks Media",
-  metaDescription: "Go behind the scenes of a media agency campaign — from the client brief and audience research to media buying, production, and real-time launch optimization.",
+  metaDescription: "Go behind the scenes of a media agency campaign — from the client brief to media buying, production, and launch optimization.",
   excerpt: "A sleek 15-second ad or a perfectly timed billboard looks simple from the outside. Here's the structured, five-stage machine that gets a campaign from a blank document to live media.",
   category: "Media Buying",
   tags: ["media planning", "media buying", "ad campaigns", "creative strategy", "marketing agency", "campaign strategy"],

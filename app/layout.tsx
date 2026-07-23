@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     default: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
     template: "%s | Hawks Media LLC",
   },
-  description:
-    "Hawks Media LLC connects advertisers with elite affiliates through exclusive pay-per-call leads. Grow your marketing business with fraud-free, high-converting campaigns",
+ description:
+  "Hawks Media connects advertisers with elite affiliates through exclusive pay-per-call leads and fraud-free, high-converting campaigns.",
 
   keywords: [
     "pay per call",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://hawksmediallc.com" },
 
   openGraph: {
-    title: "Hawks Media LLC - Performance Marketing & Pay-Per-Call Leads",
+    title: { absolute: "Hawks Media LLC - Performance Marketing & Pay-Per-Call Leads" },
     description:
       "Connect with elite affiliates and grow your revenue with Hawks Media's pay-per-call platform.",
     url: "https://hawksmediallc.com",

@@ -4,10 +4,17 @@ import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Hawks Media LLC",
-  description:
-    "Learn how Hawks Media LLC collects, uses, shares, and protects information from advertisers, publishers, and website visitors on our performance marketing platform.",
+  description: "Learn how Hawks Media LLC collects, uses, shares, and protects information from advertisers, publishers, and site visitors.",
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "Privacy Policy | Hawks Media LLC",
+    description: "How Hawks Media collects, uses, and protects information from advertisers, publishers, and visitors.",
+    url: `${SITE_URL}/privacy-policy`,
+    siteName: "Hawks Media LLC",
+    images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
+    type: "website",
+  },
 };
 
 const sections = [

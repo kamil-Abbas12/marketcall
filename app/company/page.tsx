@@ -7,12 +7,14 @@ export const metadata: Metadata = {
   description:
     "Hawks Media LLC is a performance marketing network connecting advertisers and publishers through fraud-free, pay-per-call leads across 120+ countries.",
   alternates: { canonical: `${SITE_URL}/company` },
-  openGraph: {
-    title: "About Hawks Media LLC",
-    description: "Performance marketing built on one principle: you only pay for real results.",
-    url: `${SITE_URL}/company`,
-    type: "website",
-  },
+ openGraph: {
+  title: "About Hawks Media LLC",
+  description: "Performance marketing built on one principle: you only pay for real results.",
+  url: `${SITE_URL}/company`,
+  siteName: "Hawks Media LLC",
+  images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
+  type: "website",
+},
 };
 
 const stats = [

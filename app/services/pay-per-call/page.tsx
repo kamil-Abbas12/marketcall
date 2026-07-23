@@ -6,7 +6,7 @@ import ServicePageLayout from "@/app/component/ServicePageLayout";
 const seo = SERVICE_SEO["pay-per-call"];
 
 export const metadata: Metadata = {
-  title: seo.metaTitle,
+  title: { absolute: seo.metaTitle },
   description: seo.metaDescription,
   keywords: seo.keywords,
   alternates: { canonical: seo.canonical },

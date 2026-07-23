@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/blog-data";   // ← add this import
 
 /**
  * Next.js App Router sitemap.ts
@@ -19,6 +20,12 @@ const staticRoutes: MetadataRoute.Sitemap = [
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 1.0,
+  },
+   {
+    url: `${BASE_URL}/cellphone`,          // ← add this entry
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
   },
   {
     url: `${BASE_URL}/blog`,
@@ -77,23 +84,15 @@ const serviceRoutes: MetadataRoute.Sitemap = [
   })),
 ];
 
-const blogSlugs = [
-  "real-roi-influencer-marketing-local-business",
-  "how-to-measure-marketing-performance",
-  "anatomy-of-high-converting-landing-pages",
-  "performance-marketing-vs-traditional-advertising",
-  "lead-generation-strategies-2026",
-  "how-to-choose-affiliate-network-2026",
-  "affiliate-marketing-fraud-prevention-guide",
-  "what-is-pay-per-call-marketing",
-];
 
-const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-  url: `${BASE_URL}/blog/${slug}`,
-  lastModified: new Date(),
+
+const blogRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+  url: `${BASE_URL}/blog/${post.slug}`,
+  lastModified: new Date(post.publishedAt),   // uses each post's real date instead of "now"
   changeFrequency: "monthly",
   priority: 0.7,
 }));
+
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [...staticRoutes, ...serviceRoutes, ...blogRoutes];

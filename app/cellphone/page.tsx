@@ -1,9 +1,23 @@
-"use client";
 
 import React from "react";
 import { Smartphone, Wifi, Shield, Clock, Star, ChevronRight, CheckCircle } from "lucide-react";
 import Navbar from "../component/Navbar";
-
+import { Metadata } from "next";
+import { SITE_URL } from "@/lib/seo";
+export const metadata: Metadata = {
+  title: { absolute: "Cellphone Plans & Wireless Service | Hawks Media LLC" },
+  description:
+    "Hawks Media now offers Total Wireless cellphone plans — no contracts, nationwide 5G coverage, and 24/7 support.",
+  alternates: { canonical: `${SITE_URL}/cellphone` },
+  openGraph: {
+    title: "Cellphone Plans & Wireless Service | Hawks Media",
+    description:
+      "No-contract Total Wireless plans with nationwide 5G coverage, powered by Hawks Media.",
+    url: `${SITE_URL}/cellphone`,
+    siteName: "Hawks Media LLC",
+    type: "website",
+  },
+};
 const features = [
   {
     icon: "📡",

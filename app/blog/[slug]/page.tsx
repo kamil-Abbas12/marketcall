@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPosts } from "@/lib/blog-data";
+import { SITE_URL } from "@/lib/seo";
 
 // ---------------------------------------------------------------------------
 // Static params
@@ -24,24 +25,29 @@ export async function generateMetadata({
   if (!post) return { title: "Not Found" };
 
   return {
-    title: post.metaTitle,
+title: { absolute: post.metaTitle },
     description: post.metaDescription,
     keywords: post.keywords,
-    openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
-      type: "article",
-      publishedTime: post.publishedAt,
-      authors: [post.author],
-      tags: post.tags,
-    },
+  openGraph: {
+  title: post.metaTitle,
+  description: post.metaDescription,
+  url: `${SITE_URL}/blog/${slug}`,          // ← add this
+  images: post.coverImage
+    ? [{ url: `${SITE_URL}${post.coverImage}`, width: 1200, height: 630, alt: post.title }]
+    : [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],  // ← add this, fallback for posts with no cover image
+  type: "article",
+  publishedTime: post.publishedAt,
+  authors: [post.author],
+  tags: post.tags,
+},
     twitter: {
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.metaDescription,
     },
-    alternates: post.canonicalUrl ? { canonical: post.canonicalUrl } : undefined,
-  };
+alternates: {
+  canonical: post.canonicalUrl || `${SITE_URL}/blog/${slug}`,
+},  };
 }
 
 // ---------------------------------------------------------------------------

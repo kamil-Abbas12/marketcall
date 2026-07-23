@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   description:
     "Find answers to common questions about getting started with Hawks Media — pay-per-call campaigns, affiliate payouts, fraud prevention, and partner onboarding.",
   alternates: { canonical: `${SITE_URL}/help-center` },
+  openGraph: {
+    title: "Help Center | Hawks Media",
+    description:
+      "Answers for advertisers and publishers on pay-per-call campaigns, payouts, and fraud prevention.",
+    url: `${SITE_URL}/help-center`,
+    siteName: "Hawks Media LLC",
+    images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
+    type: "website",
+  },
 };
 
 const advertiserFaqs = [

@@ -6,7 +6,8 @@ import ServicePageLayout from "@/app/component/ServicePageLayout";
 const seo = SERVICE_SEO["affiliate-marketing"];
 
 export const metadata: Metadata = {
-  title: seo.metaTitle, description: seo.metaDescription, keywords: seo.keywords,
+  title: { absolute: seo.metaTitle },
+  description: seo.metaDescription, keywords: seo.keywords,
   alternates: { canonical: seo.canonical },
   openGraph: { title: seo.metaTitle, description: seo.metaDescription, url: seo.canonical, siteName: "Hawks Media LLC", images: [{ url: seo.ogImage, width: 1200, height: 630 }], type: "website" },
   twitter: { card: "summary_large_image", title: seo.metaTitle, description: seo.metaDescription, images: [seo.ogImage] },

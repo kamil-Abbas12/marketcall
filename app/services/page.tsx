@@ -5,9 +5,9 @@ import { ArrowUpRight, Phone } from "lucide-react";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Performance Marketing Services | Pay-Per-Call, Leads & More | Hawks Media",
+title: { absolute: "Performance Marketing Services | Pay-Per-Call, Leads & More | Hawks Media" },
   description:
-    "Hawks Media offers pay-per-call marketing, lead generation, affiliate programs, performance advertising, and fraud prevention across 120+ countries. Only pay for real results.",
+   "Explore Hawks Media's performance marketing services: pay-per-call, lead gen, affiliate programs, and fraud prevention. Only pay for real results.",
   keywords: [
     "performance marketing services",
     "pay per call",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
-    title: "Performance Marketing Services | Hawks Media",
-    description:
-      "Only pay for real results. 50M+ conversions. 120+ countries. 5,000+ partners.",
-    url: `${SITE_URL}/services`,
-    siteName: "Hawks Media LLC",
-    type: "website",
-  },
+  title: "Performance Marketing Services | Hawks Media",
+  description: "Only pay for real results. 50M+ conversions. 120+ countries. 5,000+ partners.",
+  url: `${SITE_URL}/services`,
+  siteName: "Hawks Media LLC",
+  images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
+  type: "website",
+},
 };
 
 const services = [

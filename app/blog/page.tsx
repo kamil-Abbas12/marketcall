@@ -4,9 +4,12 @@ import { getAllPosts, getFeaturedPosts, getAllCategories } from "@/lib/blog-data
 import BlogCard from "../component/BlogCard";
 
 export const metadata: Metadata = {
-  title: "Blog | Hawks Media — Performance Marketing Insights",
+  title: { absolute: "Blog | Hawks Media - Performance Marketing Insights" },
   description:
     "Expert guides on pay-per-call marketing, affiliate programs, lead generation, and performance advertising. Actionable insights from the Hawks Media team.",
+  alternates: {
+    canonical: "https://hawksmediallc.com/blog",
+  },
   openGraph: {
     title: "Hawks Media Blog — Performance Marketing Insights",
     description:
@@ -215,26 +218,7 @@ export default async function BlogPage({
             </Link>
           ))}
         </div>
-
-        {/* Featured section */}
-        {!activeCategory && featuredPosts.length > 0 && (
-          <section className="mb-14">
-            <h2
-              className="text-xs font-bold uppercase tracking-widest mb-6"
-              style={{ color: "rgba(147,197,253,.72)" }}
-            >
-              Featured
-            </h2>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {featuredPosts.map((post) => (
-  <BlogCard key={`featured-${post.slug}`} post={post} featured />
-))}
-
-            </div>
-          </section>
-        )}
-
-        {/* All / filtered posts */}
+ {/* All / filtered posts */}
         <section>
           {!activeCategory && (
             <h2
@@ -260,6 +244,25 @@ export default async function BlogPage({
             </div>
           )}
         </section>
+        {/* Featured section */}
+        {!activeCategory && featuredPosts.length > 0 && (
+          <section className="my-14">
+            <h2
+              className="text-xs font-bold uppercase tracking-widest mb-6"
+              style={{ color: "rgba(147,197,253,.72)" }}
+            >
+              Featured
+            </h2>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredPosts.map((post) => (
+  <BlogCard key={`featured-${post.slug}`} post={post} featured />
+))}
+
+            </div>
+          </section>
+        )}
+
+       
       </main>
     </div>
   );
