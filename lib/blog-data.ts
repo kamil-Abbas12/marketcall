@@ -1645,6 +1645,113 @@ Building a media campaign is equal parts art and engineering. The art is finding
 When an agency gets both right, a campaign doesn't feel like an interruption. It feels like a natural part of the consumer's day.
     `,
 },
+{
+  slug: "key-call-metrics-performance-marketers-should-track",
+  title: "Key Call Metrics Every Performance Marketer Should Be Tracking",
+  metaTitle: "Key Call Metrics Every Performance Marketer Should Be Tracking | Hawks Media",
+  metaDescription: "From qualified call volume to Revenue Per Call, learn the 7 call metrics performance marketers need on their dashboard to optimize for real revenue.",
+  excerpt: "Measuring success by 'how many times the phone rang' is a quick way to blow through a media budget. Here are the 7 call metrics that actually keep pay-per-call campaigns profitable.",
+  category: "Pay-Per-Call",
+  tags: ["call metrics", "pay per call", "call tracking", "performance marketing", "CPQC", "IVR"],
+  author: "Hawks Media Team",
+  authorTitle: "Performance Marketing Experts",
+  publishedAt: "2026-07-30",
+  readingTime: 6,
+  featured: false,
+  coverImage: "/key-call-metrics-performance-marketer.webp",
+  keywords: ["call metrics", "pay per call metrics", "cost per qualified call", "revenue per call", "call tracking KPIs", "IVR drop-off rate"],
+  content: `
+## Key Call Metrics Every Performance Marketer Should Be Tracking
+ 
+If you're running performance campaigns without tracking call metrics, you're essentially burning ad spend on half the customer journey.
+ 
+In high-ticket niches like insurance, home services, legal, financial services, or healthcare, forms only capture a fraction of high-intent buyers. The highest-converting leads grab the phone and dial immediately.
+ 
+However, measuring success purely by "how many times the phone rang" is a quick way to blow through a media budget. If you want to optimize for actual revenue rather than cheap ringers, here are the key call metrics you need on your dashboard.
+ 
+---
+ 
+## 1. Raw Call Volume vs. Qualified Call Volume
+ 
+Not every call that hits your system is a viable lead. Raw call volume tells you how many times your tracking numbers were dialed, but Qualified Call Volume filters out misdials, wrong numbers, spam, and immediate hangups.
+ 
+**Why it matters:** Buying 500 cheap calls looks great in a surface-level status report until you realize 300 of them disconnected in under five seconds. Always base your unit economics on qualified calls, not total rings.
+ 
+---
+ 
+## 2. Average Call Duration (and Buffer Time)
+ 
+In call-pay networks and performance setups, "duration" is the universal proxy for buyer intent. Most payout agreements rely on a buffer time (e.g., 30, 60, or 120 seconds). Once a caller stays past that threshold, the media buyer gets paid or charged.
+ 
+- **Under 15 seconds:** Almost always a wrong number, spam bot, or instant drop-off.
+- **15–60 seconds:** Navigation time (usually stuck in an IVR menu or on hold).
+- **2+ minutes:** Genuine engagement with a sales rep or intake team.
+ 
+If your average call duration drops suddenly across a specific keyword or publisher source, it usually signals misleading ad copy or poor routing.
+ 
+---
+ 
+## 3. Answer Rate & Missed Call Rate
+ 
+You can craft the best ad, bid on the highest-intent keywords, and route the call perfectly — only for the target call center to let it go to voicemail or ring out.
+ 
+**Calculation:** (Answered Calls / Total Forwarded Calls) × 100
+ 
+If your missed call rate climbs above 5–10%, you have an operational bottleneck. Performance marketers often blame traffic quality when the actual culprit is a call center understaffed during peak bidding hours.
+ 
+---
+ 
+## 4. First-Time vs. Repeat Callers
+ 
+In pay-per-call, paying for duplicate calls from existing customers (like people calling customer support or checking on an existing order) eats into margins fast.
+ 
+Tracking First-Time Caller Percentage ensures your ad spend goes toward net-new customer acquisition. If your repeat rate is high, your ad positioning or negative keyword strategy needs immediate tightening to filter out existing account inquiries.
+ 
+---
+ 
+## 5. Cost Per Qualified Call (CPQC) & CPA
+ 
+Cost Per Click (CPC) and Cost Per Lead (CPL) are secondary metrics here. The metric that actually keeps campaigns sustainable is Cost Per Qualified Call (CPQC).
+ 
+**CPQC = Total Ad Spend ÷ Total Calls Passing Buffer Time**
+ 
+Comparing your CPQC against your ultimate Cost Per Acquisition (CPA) tells you whether the call center is actually closing the traffic you deliver.
+ 
+---
+ 
+## 6. IVR Drop-Off Rate
+ 
+Interactive Voice Response (IVR) menus ("Press 1 for Sales, press 2 for Support") help qualify traffic, but every menu step introduces friction.
+ 
+Monitor where users hang up in your IVR tree. If 40% of callers drop off on Question 2, your routing questions are either too intrusive, confusing, or simply taking too long to connect to a human.
+ 
+---
+ 
+## 7. Revenue Per Call (RPC) & ROAS
+ 
+To scale campaigns confidently, you need to know what an average call brings to your bottom line.
+ 
+**RPC = Total Revenue Generated ÷ Total Calls Received**
+ 
+When you know your RPC is $45, you can aggressively outbid competitors paying $25 per call because your unit economics and routing efficiency are locked in.
+ 
+---
+ 
+## How to Put This into Practice
+ 
+Don't try to overhaul your tracking stack overnight. Start by establishing a clean baseline:
+ 
+1. **Dynamic Number Insertion (DNI):** Match incoming calls to specific PPC ads, search terms, and landing pages.
+2. **Standardize Buffer Times:** Align pay-per-call payouts with your sales team's historical average time-to-close.
+3. **Audit Daily Peak Hours:** Run heatmaps of call answer rates by time of day to match your ad schedules directly to agent availability.
+ 
+---
+ 
+## The Bottom Line
+ 
+Call volume alone tells you almost nothing about campaign health. Qualified calls, buffer-adjusted duration, answer rates, first-time caller percentage, CPQC, IVR drop-off, and RPC together give you the full picture of whether your media spend is actually converting into revenue. Build your dashboard around these seven metrics, and you'll stop paying for cheap ringers and start optimizing for real, closeable leads.
+    `,
+},
 ];
  
 export function getAllPosts(): BlogPost[] {
