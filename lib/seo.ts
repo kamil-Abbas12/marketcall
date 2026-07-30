@@ -101,7 +101,7 @@ export const SERVICE_SEO: Record<
     title: "Fraud Prevention",
     metaTitle: "Ad Fraud Prevention & Traffic Verification | Hawks Media",
     metaDescription:
-     "Protect your ad spend with real-time fraud detection, bot filtering, and call validation. 99.8% clean traffic guaranteed."
+     "Protect your ad spend with real-time fraud detection, bot filtering, and call validation. 99.8% clean traffic guaranteed.",
     keywords: ["ad fraud prevention", "click fraud protection", "traffic verification", "call fraud detection", "bot traffic detection", "invalid traffic prevention"],
     h1: "Ad Fraud Prevention - Protect Every Dollar of Your Ad Spend",
     canonical: `${SITE_URL}/services/fraud-prevention`,
