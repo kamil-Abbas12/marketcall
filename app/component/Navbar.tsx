@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pageLinks = [
-    { label: "Cellphone", href: "/cellphone" },
+  { label: "Cellphone", href: "/cellphone" },
   { label: "Help Center", href: "/help-center" },
   { label: "Industries", href: "/industries" },
   { label: "Company", href: "/company" },
@@ -50,31 +50,24 @@ const serviceLinks = [
   },
 ];
 
-const blogLinks = [{ label: "Blog Grid", href: "/blog" }];
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // Desktop dropdowns
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [blogOpen, setBlogOpen] = useState(false);
 
   // Mobile dropdowns
   const [mobileServicesOpen, setMobileServicesOpen] =
     useState(false);
-  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
 
   const servicesRef = useRef<HTMLDivElement>(null);
-  const blogWrapRef = useRef<HTMLDivElement | null>(null);
-
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 24);
 
       setServicesOpen(false);
-      setBlogOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -91,13 +84,6 @@ const Navbar = () => {
       ) {
         setServicesOpen(false);
       }
-
-      if (
-        blogWrapRef.current &&
-        !blogWrapRef.current.contains(e.target as Node)
-      ) {
-        setBlogOpen(false);
-      }
     };
 
     window.addEventListener("mousedown", onDown);
@@ -105,8 +91,6 @@ const Navbar = () => {
     return () =>
       window.removeEventListener("mousedown", onDown);
   }, []);
-
-
 
   return (
     <>
@@ -166,6 +150,7 @@ const Navbar = () => {
           display: flex;
           align-items: center;
           gap: 4px;
+          text-decoration: none;
         }
 
         .nav-link:hover {
@@ -266,6 +251,7 @@ const Navbar = () => {
           cursor: pointer;
           padding: 8px 0;
           text-align: center;
+          text-decoration: none;
         }
 
         .mobile-link:hover {
@@ -420,79 +406,21 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* BLOG */}
-            <div
-              style={{ position: "relative" }}
-              ref={blogWrapRef}
-            >
-              <button
-                className={`nav-link ${
-                  blogOpen ? "services-active" : ""
-                }`}
-                onClick={() => setBlogOpen(!blogOpen)}
-                onMouseEnter={() => setBlogOpen(true)}
+            {/* BLOG - direct link, no dropdown */}
+            <Link href="/blog" className="nav-link">
+              Blog
+            </Link>
+
+            {/* PAGES */}
+            {pageLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="nav-link"
               >
-                Blog
-
-                <ChevronDown
-                  size={14}
-                  style={{
-                    transition: "0.2s",
-                    transform: blogOpen
-                      ? "rotate(180deg)"
-                      : "rotate(0deg)",
-                  }}
-                />
-              </button>
-
-              {blogOpen && (
-                <div
-                  className="services-dropdown"
-                  style={{ width: 260 }}
-                  onMouseLeave={() =>
-                    setBlogOpen(false)
-                  }
-                >
-                  <div className="dropdown-header">
-                    Latest Articles
-                  </div>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      padding: 8,
-                    }}
-                  >
-                    {blogLinks.map((blog) => (
-                      <Link
-                        key={blog.href}
-                        href={blog.href}
-                        className="dropdown-item"
-                        onClick={() =>
-                          setBlogOpen(false)
-                        }
-                      >
-                        <span className="dropdown-label">
-                          {blog.label}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-         {/* PAGES */}
-{pageLinks.map((item) => (
-  <Link
-    key={item.href}
-    href={item.href}
-    className="nav-link"
-  >
-    {item.label}
-  </Link>
-))}
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* MOBILE BUTTON */}
@@ -516,53 +444,14 @@ const Navbar = () => {
               }}
             >
 
-              {/* BLOG */}
-              <div style={{ textAlign: "center" }}>
-                <button
-                  className="mobile-services-btn"
-                  onClick={() =>
-                    setMobileBlogOpen(!mobileBlogOpen)
-                  }
-                >
-                  <span>Blog</span>
-
-                  <ChevronDown
-                    size={16}
-                    style={{
-                      transition: "0.2s",
-                      transform: mobileBlogOpen
-                        ? "rotate(180deg)"
-                        : "rotate(0deg)",
-                    }}
-                  />
-                </button>
-
-                {mobileBlogOpen && (
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: 4,
-                      marginTop: 8,
-                    }}
-                  >
-                    {blogLinks.map((blog) => (
-                      <Link
-                        key={blog.href}
-                        href={blog.href}
-                        className="mobile-service-link"
-                        onClick={() => {
-                          setMenuOpen(false);
-                          setMobileBlogOpen(false);
-                        }}
-                      >
-                        {blog.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* BLOG - direct link, no dropdown */}
+              <Link
+                href="/blog"
+                className="mobile-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                Blog
+              </Link>
 
               {/* SERVICES */}
               <div style={{ textAlign: "center" }}>
@@ -615,17 +504,17 @@ const Navbar = () => {
                 )}
               </div>
 
-           {/* PAGES */}
-{pageLinks.map((item) => (
-  <Link
-    key={item.href}
-    href={item.href}
-    className="mobile-link"
-    onClick={() => setMenuOpen(false)}
-  >
-    {item.label}
-  </Link>
-))}
+              {/* PAGES */}
+              {pageLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="mobile-link"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
 
               <div className="mobile-divider" />
 
