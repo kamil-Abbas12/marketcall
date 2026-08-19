@@ -5,7 +5,7 @@ import { ArrowUpRight, Phone } from "lucide-react";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-title: { absolute: "Performance Marketing Services | Pay-Per-Call, Leads & More | Hawks Media" },
+title: { absolute: "Performance Marketing Services | Hawks Media" },
   description:
    "Explore Hawks Media's performance marketing services: pay-per-call, lead gen, affiliate programs, and fraud prevention. Only pay for real results.",
   keywords: [

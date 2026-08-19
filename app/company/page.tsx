@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Hawks Media LLC | Performance Marketing Company",
+  title: "About Hawks Media LLC | Performance Marketing",
   description:
     "Hawks Media LLC is a performance marketing network connecting advertisers and publishers through fraud-free, pay-per-call leads across 120+ countries.",
   alternates: { canonical: `${SITE_URL}/company` },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Insurance, Legal, Home Services & More | Hawks Media",
+  title: "Industries We Serve | Hawks Media",
   description:
     "Hawks Media delivers high-converting pay-per-call leads and affiliate campaigns across insurance, home services, legal, financial services, and healthcare verticals.",
   alternates: { canonical: `${SITE_URL}/industries` },

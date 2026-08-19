@@ -4,7 +4,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-measure-marketing-performance",
     title: "How to Measure Marketing Performance Without Drowning in Data",
-    metaTitle: "How to Measure Marketing Performance Without Drowning in Data | Hawks Media",
+    metaTitle: "How to Measure Marketing Performance | Hawks Media",
 metaDescription: "Stop tracking everything and start tracking what matters. Build a performance framework that gives total clarity on your marketing ROI.",
     excerpt: "Every Monday morning the same wall of numbers hits you. Click-through rates, impressions, cost-per-lead — but is any of it actually working? Here's how to cut through the noise and track what matters.",
     category: "Performance Marketing",
@@ -89,7 +89,7 @@ Stop drowning in the decimals. Focus on the pipeline.
   {
     slug: "what-is-pay-per-call-marketing",
     title: "What Is Pay-Per-Call Marketing? The Complete 2026 Guide",
-    metaTitle: "What Is Pay-Per-Call Marketing? Complete Guide 2026 | Hawks Media",
+    metaTitle: "What Is Pay-Per-Call Marketing? 2026 Guide | Hawks Media",
  metaDescription: "Discover how pay-per-call marketing works and why advertisers see 10–30x higher conversion rates with inbound phone leads.",
 
     excerpt: "Pay-per-call is the fastest-growing performance channel. Learn how it works, who it's for, and why top advertisers are shifting budgets to inbound phone leads.",
@@ -198,7 +198,7 @@ Pay-per-call marketing is the most intent-rich, ROI-positive performance channel
   {
     slug: "affiliate-marketing-beginners-guide-2026",
     title: "Affiliate Marketing for Beginners: How to Earn $10K/Month in 2026",
-    metaTitle: "Affiliate Marketing for Beginners: Step-by-Step Guide to $10K/Month | Hawks Media",
+    metaTitle: "Affiliate Marketing for Beginners Guide | Hawks Media",
     metaDescription: "Learn how affiliate marketing works in 2026, which niches pay the most, and how to build a sustainable income stream promoting high-converting offers.",
     excerpt: "Affiliate marketing is one of the most accessible ways to build passive income online. This step-by-step guide shows exactly how to start, which niches to target, and how top affiliates hit $10K/month.",
     category: "Affiliate Marketing",
@@ -426,7 +426,7 @@ The most resilient programs don't rely on a single channel. Build 2–3 compleme
   {
     slug: "performance-marketing-vs-traditional-advertising",
     title: "Performance Marketing vs. Traditional Advertising: Which Wins in 2026?",
-    metaTitle: "Performance Marketing vs Traditional Advertising: Full Comparison 2026 | Hawks Media",
+    metaTitle: "Performance Marketing vs Traditional Ads | Hawks Media",
    metaDescription: "Compare performance marketing vs traditional advertising on ROI, attribution, and risk. See why brands are shifting $100B+ to performance.",
 
     excerpt: "Traditional advertising is losing market share at an unprecedented rate. Here's a data-driven comparison and why the shift is accelerating.",
@@ -1104,8 +1104,7 @@ The answer will tell you exactly what needs fixing.
 {
   slug: "branding-mistakes-companies-look-untrustworthy-online",
   title: "Branding Mistakes That Make Companies Look Untrustworthy Online",
-  metaTitle:
-    "Branding Mistakes That Make Companies Look Untrustworthy Online | Hawks Media",
+  metaTitle: "Branding Mistakes That Hurt Trust Online | Hawks Media",
   metaDescription: "Discover five branding mistakes that make companies look untrustworthy online, and how to build credibility and customer trust.",
 
   excerpt:
@@ -1243,7 +1242,7 @@ If you claim to be the top lead generator or the most reliable contractor in the
 {
     slug: "brand-reputation-management-online-reviews",
     title: "Brand Reputation in the Age of Reviews and Comments: How to Win Trust Online",
-    metaTitle: "Brand Reputation Management in the Age of Reviews & Comments | Hawks Media",
+    metaTitle: "Brand Reputation Management & Reviews | Hawks Media",
    metaDescription: "Learn how to manage your brand reputation in 2026 — from handling negative reviews to turning critics into advocates.",
 
 
@@ -1338,7 +1337,7 @@ The brands that win today aren't the ones that never mess up; they are the ones 
   {
   slug: "small-businesses-beat-big-brands-video-marketing",
   title: "How Small Businesses Can Beat Big Brands at Video Marketing",
-  metaTitle: "How Small Businesses Can Beat Big Brands at Video Marketing | Hawks Media",
+  metaTitle: "Small Businesses Beat Big Brands at Video | Hawks Media",
   metaDescription: "You don't need a Hollywood budget for video marketing. Learn how small businesses use authenticity to outperform big-brand ads.",
 
   excerpt: "Big brands have the budget, but audiences have corporate fatigue. Here's how small businesses can lean into raw authenticity to dominate video marketing without a Hollywood budget.",
@@ -1439,7 +1438,7 @@ Stop trying to copy the sleek, sanitized look of the corporate giants. Embrace t
 {
   slug: "short-form-vs-long-form-content-brand-strategy",
   title: "Short-Form vs Long-Form Content: What Should Your Brand Prioritize",
-  metaTitle: "Short-Form vs Long-Form Content: What Should Your Brand Prioritize | Hawks Media",
+  metaTitle: "Short-Form vs Long-Form Content | Hawks Media",
  metaDescription: "Short-form or long-form content — which should your brand focus on? Learn the Hub & Spoke strategy that lets you win with both.",
 
 
@@ -1540,7 +1539,7 @@ Are you leaning too heavily into the quick-win feeds, or are you hiding behind m
 {
   slug: "how-media-agency-builds-campaign-brief-to-launch",
   title: "How a Media Agency Builds a Campaign from Brief to Launch",
-  metaTitle: "How a Media Agency Builds a Campaign from Brief to Launch | Hawks Media",
+  metaTitle: "How a Media Agency Builds a Campaign | Hawks Media",
   metaDescription: "Go behind the scenes of a media agency campaign — from the client brief to media buying, production, and launch optimization.",
   excerpt: "A sleek 15-second ad or a perfectly timed billboard looks simple from the outside. Here's the structured, five-stage machine that gets a campaign from a blank document to live media.",
   category: "Media Buying",
@@ -1648,7 +1647,7 @@ When an agency gets both right, a campaign doesn't feel like an interruption. It
 {
   slug: "key-call-metrics-performance-marketers-should-track",
   title: "Key Call Metrics Every Performance Marketer Should Be Tracking",
-  metaTitle: "Key Call Metrics Every Performance Marketer Should Be Tracking | Hawks Media",
+  metaTitle: "Key Call Metrics for Performance Marketers | Hawks Media",
   metaDescription: "From qualified call volume to Revenue Per Call, learn the 7 call metrics performance marketers need on their dashboard to optimize for real revenue.",
   excerpt: "Measuring success by 'how many times the phone rang' is a quick way to blow through a media budget. Here are the 7 call metrics that actually keep pay-per-call campaigns profitable.",
   category: "Pay-Per-Call",
@@ -1924,7 +1923,7 @@ If your current lead magnets are yielding low contact rates and endless follow-u
   {
   slug: "real-time-call-routing-increases-sales-conversion-rates",
   title: "How Real-Time Call Routing Increases Sales Conversion Rates",
-  metaTitle: "How Real-Time Call Routing Increases Sales Conversion Rates | Hawks Media",
+  metaTitle: "Real-Time Call Routing Boosts Conversions | Hawks Media",
   metaDescription: "Discover how real-time call routing eliminates hold-time drop-offs, matches callers to the right agent, and boosts pay-per-call conversion rates.",
   excerpt: "When a prospect calls, their intent is at its peak. Learn how real-time call routing captures that moment before it cools off — and why it's the difference between a closed deal and a dead lead.",
   category: "Pay-Per-Call",

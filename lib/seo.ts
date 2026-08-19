@@ -23,7 +23,7 @@ export const SERVICE_SEO: Record<
   "pay-per-call": {
     slug: "pay-per-call",
     title: "Pay-Per-Call Marketing",
-    metaTitle: "Pay-Per-Call Marketing Services | Only Pay for Real Calls | Hawks Media",
+    metaTitle: "Real-Time Call Routing Boosts Conversions | Hawks Media",
     metaDescription:
      "Stop wasting ad budget on clicks that never convert. Get verified, high-intent inbound calls — only pay when the phone rings.",
     keywords: ["pay per call marketing", "pay per call leads", "inbound call marketing", "performance marketing calls", "pay per call advertising", "call generation"],
