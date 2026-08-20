@@ -710,7 +710,7 @@ Our 98% advertiser retention rate exists because our clients trust that every bi
   {
     slug: "real-roi-influencer-marketing-local-business",
     title: "The Real ROI of Influencer Marketing for Local Businesses",
-    metaTitle: "The Real ROI of Influencer Marketing for Local Businesses | Hawks Media",
+metaTitle: "Influencer Marketing ROI for Local Business | Hawks Media",
     metaDescription: "Forget the billion-dollar influencer headlines. Learn how local businesses use nano and micro-influencers to drive real foot traffic.",
 
     excerpt: "National influencer stats don't apply to a 10-mile radius. Here's how local businesses can use nano and micro-creators to drive measurable foot traffic — and the content assets that come with it.",
@@ -1923,7 +1923,7 @@ If your current lead magnets are yielding low contact rates and endless follow-u
   {
   slug: "real-time-call-routing-increases-sales-conversion-rates",
   title: "How Real-Time Call Routing Increases Sales Conversion Rates",
-  metaTitle: "Real-Time Call Routing Boosts Conversions | Hawks Media",
+  metaTitle: "Real-Time Call Routing Boosts Conversions ",
   metaDescription: "Discover how real-time call routing eliminates hold-time drop-offs, matches callers to the right agent, and boosts pay-per-call conversion rates.",
   excerpt: "When a prospect calls, their intent is at its peak. Learn how real-time call routing captures that moment before it cools off — and why it's the difference between a closed deal and a dead lead.",
   category: "Pay-Per-Call",

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Help Center | Advertiser & Publisher FAQs | Hawks Media",
+  title: { absolute: "Help Center | Advertiser & Publisher FAQs | Hawks Media" },
   description:
     "Find answers to common questions about getting started with Hawks Media — pay-per-call campaigns, affiliate payouts, fraud prevention, and partner onboarding.",
   alternates: { canonical: `${SITE_URL}/help-center` },

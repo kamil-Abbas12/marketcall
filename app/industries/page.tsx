@@ -5,16 +5,16 @@ import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Industries We Serve | Hawks Media",
   description:
-    "Hawks Media delivers high-converting pay-per-call leads and affiliate campaigns across insurance, home services, legal, financial services, and healthcare verticals.",
+    "Hawks Media delivers high-converting pay-per-call leads and affiliate campaigns across insurance, home, legal, financial, and healthcare verticals.",
   alternates: { canonical: `${SITE_URL}/industries` },
- openGraph: {
-  title: "Industries We Serve | Hawks Media",
-  description: "High-intent pay-per-call leads across insurance, home services, legal, financial services, and healthcare.",
-  url: `${SITE_URL}/industries`,
-  siteName: "Hawks Media LLC",
-  images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
-  type: "website",
-},
+  openGraph: {
+    title: "Industries We Serve | Hawks Media",
+    description: "High-intent pay-per-call leads across insurance, home services, legal, financial services, and healthcare.",
+    url: `${SITE_URL}/industries`,
+    siteName: "Hawks Media LLC",
+    images: [{ url: `${SITE_URL}/logo.png`, width: 1200, height: 630, alt: "Hawks Media LLC" }],
+    type: "website",
+  },
 };
 
 const industries = [

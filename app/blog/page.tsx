@@ -15,7 +15,13 @@ export async function generateMetadata({
   const activeCategory = resolvedParams.category ?? null;
   const currentPage = Math.max(1, parseInt(resolvedParams.page ?? "1", 10) || 1);
 
-  // Category filter views: duplicate content of /blog — canonicalize back AND noindex.
+  const ogImage = {
+    url: `${BASE_URL}/logo.png`,
+    width: 1200,
+    height: 630,
+    alt: "Hawks Media Blog — Performance Marketing Insights",
+  };
+
   if (activeCategory) {
     return {
       title: { absolute: `${activeCategory} Articles | Hawks Media Blog` },
@@ -23,10 +29,18 @@ export async function generateMetadata({
         "Expert guides on pay-per-call marketing, affiliate programs, lead generation, and performance advertising. Actionable insights from the Hawks Media team.",
       alternates: { canonical: `${BASE_URL}/blog` },
       robots: { index: false, follow: true },
+      openGraph: {
+        title: `${activeCategory} Articles | Hawks Media Blog`,
+        description:
+          "Expert guides on pay-per-call marketing, affiliate programs, lead generation, and performance advertising.",
+        url: `${BASE_URL}/blog`,
+        siteName: "Hawks Media LLC",
+        type: "website",
+        images: [ogImage],
+      },
     };
   }
 
-  // Pagination on the unfiltered list: unique content per page — self-canonical, indexable.
   const canonicalUrl =
     currentPage > 1 ? `${BASE_URL}/blog?page=${currentPage}` : `${BASE_URL}/blog`;
 
@@ -39,10 +53,16 @@ export async function generateMetadata({
       "Expert guides on pay-per-call marketing, affiliate programs, lead generation, and performance advertising. Actionable insights from the Hawks Media team.",
     alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: "Hawks Media Blog — Performance Marketing Insights",
+      title:
+        currentPage > 1
+          ? `Hawks Media Blog — Page ${currentPage}`
+          : "Hawks Media Blog — Performance Marketing Insights",
       description:
         "Expert guides on pay-per-call marketing, affiliate programs, lead generation, and performance advertising.",
+      url: canonicalUrl,
+      siteName: "Hawks Media LLC",
       type: "website",
+      images: [ogImage],
     },
   };
 }

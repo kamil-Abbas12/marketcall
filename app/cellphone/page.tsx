@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/cellphone`,
     siteName: "Hawks Media LLC",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "Hawks Media Cellphone Plans & Wireless Service",
+      },
+    ],
   },
 };
 const features = [
