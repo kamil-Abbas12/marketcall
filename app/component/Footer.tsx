@@ -156,13 +156,13 @@ export default function Footer() {
           >
             {/* Brand col */}
             <div style={{ minWidth: 120 }}>
-              <Image
-                src="/logo.png"
-                alt="Hawks Media LLC"
-                width={120}
-                height={70}
-                style={{ objectFit: "cover", borderRadius: "8px", marginBottom: "20px" }}
-              />
+            <Image
+  src="/logo.png"
+  alt="Hawks Media LLC"
+  width={120}
+  height={26}
+  style={{ borderRadius: "8px", marginBottom: "20px" }}
+/>
               <p className="footer-desc">
                 Hawks Media LLC helps businesses grow faster with exclusive
                 pay-per-call leads — connecting you with high-intent prospects actively

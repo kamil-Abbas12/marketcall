@@ -346,28 +346,13 @@ const Navbar = () => {
               style={{ position: "relative" }}
               ref={servicesRef}
             >
-              <button
-                className={`nav-link ${
-                  servicesOpen ? "services-active" : ""
-                }`}
-                onClick={() =>
-                  setServicesOpen(!servicesOpen)
-                }
-                onMouseEnter={() =>
-                  setServicesOpen(true)
-                }
-              >
-                Services
-
-                <ChevronDown
-                  size={14}
-                  style={{
-                    transition: "0.2s",
-                    transform: servicesOpen
-                      ? "rotate(180deg)"
-                      : "rotate(0deg)",
-                  }}
-                />
+            <button
+  className={`nav-link ${servicesOpen ? "services-active" : ""}`}
+  onClick={() => setServicesOpen(!servicesOpen)}
+  onMouseEnter={() => setServicesOpen(true)}
+  aria-expanded={servicesOpen}
+  aria-haspopup="true"
+>
               </button>
 
               {servicesOpen && (
@@ -425,11 +410,13 @@ const Navbar = () => {
 
           {/* MOBILE BUTTON */}
           <button
-            className="nav-hamburger lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+  className="nav-hamburger lg:hidden"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label={menuOpen ? "Close menu" : "Open menu"}
+  aria-expanded={menuOpen}
+>
+  {menuOpen ? <X size={24} /> : <Menu size={24} />}
+</button>
         </nav>
 
         {/* MOBILE MENU */}
