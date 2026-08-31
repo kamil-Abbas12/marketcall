@@ -14,20 +14,22 @@ export default function robots(): MetadataRoute.Robots {
           "/private/",
         ],
       },
-      // Block AI training crawlers
-      
-       {
-  userAgent: [
-    "GPTBot",
-    "ChatGPT-User",
-    "CCBot",
-    "anthropic-ai",
-    "Claude-Web",
-    "Omgilibot",
-  ],
-  disallow: "/",
-},
-     
+      // Block AI training crawlers only
+      {
+        userAgent: [
+          "GPTBot",
+          "CCBot",
+          "anthropic-ai",
+          "Omgilibot",
+          "Google-Extended",
+        ],
+        disallow: "/",
+      },
+      // Allow AI search/citation and live-browsing bots
+      {
+        userAgent: ["ChatGPT-User", "Claude-Web"],
+        allow: "/",
+      },
     ],
     sitemap: "https://hawksmediallc.com/sitemap.xml",
     host: "https://hawksmediallc.com",

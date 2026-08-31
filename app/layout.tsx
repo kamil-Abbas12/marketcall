@@ -13,15 +13,13 @@ const outfit = Outfit({
   display: "swap",
   variable: "--font-outfit",
 });
-
 export const metadata: Metadata = {
-  // ── CHANGED: title is now an object with a template ──
   title: {
-    default: "Hawks Media LLC — Performance Marketing & Pay-Per-Call Leads",
+    default: "Hawks Media LLC | Performance Marketing Network",
     template: "%s | Hawks Media LLC",
   },
- description:
-  "Hawks Media connects advertisers with elite affiliates through exclusive pay-per-call leads and fraud-free, high-converting campaigns.",
+  description:
+    "Hawks Media connects advertisers with elite affiliates through exclusive pay-per-call leads and fraud-free, high-converting campaigns.",
 
   keywords: [
     "pay per call",
