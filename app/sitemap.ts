@@ -88,12 +88,20 @@ const serviceRoutes: MetadataRoute.Sitemap = [
 
 const blogRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
   url: `${BASE_URL}/blog/${post.slug}`,
-  lastModified: new Date(post.publishedAt),   // uses each post's real date instead of "now"
-  changeFrequency: "monthly",
+  lastModified: new Date(post.publishedAt),
+  changeFrequency: "monthly" as const,
   priority: 0.7,
 }));
 
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = getAllPosts(); // if it's async, await it here
+  const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 }
