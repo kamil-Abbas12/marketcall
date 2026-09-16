@@ -2306,9 +2306,9 @@ Producing great written content is only half the battle. To maximize reach and r
 | Original Asset | Repurposed Formats | Target Platform |
 |---|---|---|
 | Comprehensive Research Report | Key takeaways slide deck | LinkedIn |
-| Comprehensive Research Report | Breakdown thread or short post | X / Microblogs |
-| Comprehensive Research Report | Video walkthrough or Q&A | YouTube |
-| Comprehensive Research Report | Audio discussion | Podcast / Webinars |
+| | Breakdown thread or short post | X / Microblogs |
+| | Video walkthrough or Q&A | YouTube |
+| | Audio discussion | Podcast / Webinars |
 
 One strong pillar asset, repurposed correctly, can fuel weeks of distribution across every channel your audience uses — without diluting the core message.
 
