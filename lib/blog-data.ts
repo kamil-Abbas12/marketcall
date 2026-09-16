@@ -2251,7 +2251,7 @@ While exclusive leads require a higher upfront investment per contact, the retur
   tags: ["content marketing", "brand authority", "content strategy", "thought leadership", "seo content", "executive branding"],
   author: "Hawks Media Team",
   authorTitle: "Performance Marketing Experts",
-  publishedAt: "2026-09-15",
+  publishedAt: "2026-09-16",
   readingTime: 7,
   featured: false,
   coverImage: "/content-marketing-strategies-brand-authority.webp",
