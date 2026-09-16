@@ -2305,8 +2305,8 @@ Producing great written content is only half the battle. To maximize reach and r
 
 | Original Asset | Repurposed Formats | Target Platform |
 |---|---|---|
-| Comprehensive Research Report | Key takeaways slide deck | LinkedIn |
-| | Breakdown thread or short post | X / Microblogs |
+| | Key takeaways slide deck | LinkedIn |
+| Comprehensive Research Report | Breakdown thread or short post | X / Microblogs |
 | | Video walkthrough or Q&A | YouTube |
 | | Audio discussion | Podcast / Webinars |
 
